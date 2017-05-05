@@ -17,7 +17,8 @@ fi
 
 name=Ice1r$number
 
-HomePath=/home/imerino/CM_MISOMIP
+HomePath=<HOMEDIR_MISOMIP>
+
 WorkPath=/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP
 
 RUN_NEMO=<NEMO_RUN>
@@ -35,7 +36,7 @@ Restart=../RESTART/$nameRestart.result
 RestartPosition=0
 
 sifName=$name.sif
-ScketchPath=$HomePath/Templates/Sif/
+ScketchPath=$HomePath/../../Templates/Sif/
 scketch=$ScketchPath/scketchIce1r_SSAStar_fromNEMO.sif
 
 
@@ -63,7 +64,7 @@ cat $scketch | sed -e "s#<ResultsPath>#$ResultsPath#g" \
                  -e "s#<ExecPath>#$ExecPath#g" \
                  -e "s#<RestartPosition>#$RestartPosition#g" \
                  -e "s#<meltRate>#$MeltRate#g" \
-                 -e "s#<MELT_FILE>#$HomePath/RUNS/$run/melt_rates.nc#g" \
+                 -e "s#<MELT_FILE>#$HomePath/melt_rates.nc#g" \
                  -e "s#<outIntervals>#$outIntervals#g" \
                  -e "s#<Intervals>#$Intervals#g" \
                  -e "s#<CCou>#$CCou#g" \
@@ -82,13 +83,13 @@ nodes=1
 tasks=$numParts
 timeJob=09:50:00
 jobName=$name
-slurmScketch=$HomePath/Templates/Slurm/launchSck.slurm
+slurmScketch=$HomePath/../../Templates/Slurm/launchSck.slurm
 slurmFile=launchExec.slurm
 
 cat $slurmScketch | sed -e "s#<jobName>#$jobName#g" \
                         -e "s#<nodes>#$nodes#g" \
                         -e "s#<RUN>#$run#g" \
-                        -e "s#<MISOMIP_HOMEDIR>#$HomePath/RUNS/$run#g" \
+                        -e "s#<MISOMIP_HOMEDIR>#$HomePath#g" \
                         -e "s#<RUN_ELMER_PATH>#$RUN_ELMER#g" \
                         -e "s#<RUN_NEMO_PATH>#$RUN_NEMO#g" \
                         -e "s#<tasks>#$tasks#g" \

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #PARAMETERS
-NRUN_MAX=3
+NRUN_MAX=1
 
 ELMER_MESH_NAME=MISMIP_REGULAR
 FREQ_OUTPUT_ELMER=6
@@ -52,6 +52,7 @@ chmod 755 $HOMEDIR_MISOMIP/scriptWriteISFDraft.sh
 cat Scripts/scriptIce1rExecute.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<NEMO_RUN>#$WORKDIR_NEMO/run/$1#g" \
                  -e "s#<NRUN_MAX>#$NRUN_MAX#g" \
+                 -e "s#<HOMEDIR_MISOMIP>#$HOMEDIR_MISOMIP#g" \
                  -e "s#<OUTPUT_FREQ_ELMER>#$FREQ_OUTPUT_ELMER#g" \
                  -e "s#<INTERVALS_ELMER>#$INTERVALS_ELMER#g" \
                  -e "s#<TIME_STEP_ELMER>#$TIME_STEP_ELMER#g" \
@@ -64,6 +65,7 @@ chmod 755 $ELMER_WORK_PATH/scriptIce1rExecute.sh
 cat Scripts/scriptInitDomain.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<caseTest>#$CASE_RESTART#g" \
                  -e "s#<path_restart>#$PATH_RESTART#g" \
+                 -e "s#<HOMEDIR_MISOMIP>#$HOMEDIR_MISOMIP#g" \
                  -e "s#<RunRestart>#$RUN_RESTART#g" \
                  -e "s#<NEMO_RUN>#$WORKDIR_NEMO/run/$1#g" \
                  -e "s#<numParts>#$NUM_PARTITIONS_ELMER#g" \
