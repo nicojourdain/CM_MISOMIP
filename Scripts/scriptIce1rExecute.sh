@@ -53,7 +53,7 @@ CCou=0.5
 MeltRate=-0.2
 
 CALL_NEMO=0
-if [ $1 -lt $NRUN_MAX -lt ]
+if [ $1 -lt $NRUN_MAX ]
 then
 	CALL_NEMO=1
 fi
