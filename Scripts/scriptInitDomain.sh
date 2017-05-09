@@ -13,7 +13,7 @@ nameRestart=<RunRestart>
 numParts=<numParts>
 nodes=<numNodes>
 
-HomePath=/home/imerino/CM_MISOMIP
+HomePath=<HOMEDIR_MISOMIP>
 WorkPath=/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP
 RUN_NEMO=<NEMO_RUN>
 RUN_ELMER=$WorkPath
@@ -31,7 +31,7 @@ Restart=../RESTART/$nameRestart.result
 RestartPosition=0
 
 sifName=$name.sif
-ScketchPath=$HomePath/Templates/Sif/
+ScketchPath=$HomePath/../../Templates/Sif/
 scketch=$ScketchPath/scketchInit$Type.sif
 
 cat $scketch | sed -e "s#<FileSource>#$FileSource#g" \
@@ -46,7 +46,7 @@ cat $scketch | sed -e "s#<FileSource>#$FileSource#g" \
 echo $sifName >> toto
 mv toto ELMERSOLVER_STARTINFO
 
-slurmScketch=$HomePath/Templates/Slurm/launchSck.slurm
+slurmScketch=$HomePath/../../Templates/Slurm/launchSck.slurm
 slurmFile=launchInit.slurm
 
 
@@ -61,7 +61,7 @@ cat $slurmScketch | sed -e "s#<jobName>#$jobName#g" \
                         -e "s#<RUN>#$run#g" \
                         -e "s#<RUN_ELMER_PATH>#$RUN_ELMER#g" \
                         -e "s#<RUN_NEMO_PATH>#$RUN_NEMO#g" \
-                        -e "s#<MISOMIP_HOMEDIR>#$HomePath/RUNS/$run#g" \
+                        -e "s#<MISOMIP_HOMEDIR>#$HomePath#g" \
                         -e "s#<time>#$timeJob#g" > $slurmFile
 
 START_FROM_RST=$2
