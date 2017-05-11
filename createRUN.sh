@@ -84,6 +84,9 @@ cat Scripts/script_SpinUp_MISOMIP.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<ELMER_RUN>#$ELMER_WORK_PATH#g" > $HOMEDIR_MISOMIP/script_SpinUp_MISOMIP.sh
 chmod 755 $HOMEDIR_MISOMIP/script_SpinUp_MISOMIP.sh
 
+cp Scripts/read_write_Elmer_run_info.sh $HOMEDIR_MISOMIP/read_write_Elmer_run_info.sh
+chmod 755 $HOMEDIR_MISOMIP/read_write_Elmer_run_info.sh
+
 #Set files in Workdir NEMO
 cp $WORKDIR_NEMO/FILES/* $WORKDIR_NEMO/run/$1
 cd $WORKDIR_NEMO/run/$1
@@ -93,6 +96,9 @@ cat run_nemo_ISOMIP.sh | sed -e "s#<CASE_NAME>#$1#g"  \
 		-e "s#<ELMER_WORK_PATH>#$ELMER_WORK_PATH#g"> temp.sh
 mv temp.sh run_nemo_ISOMIP.sh
 chmod 755 run_nemo_ISOMIP.sh
+
+ln -sf $WORKDIR_NEMO $HOMEDIR_MISOMIP/WORK_NEMO
+ln -sf $ELMER_WORK_PATH $HOMEDIR_MISOMIP/WORK_ELMER
 
 #SetFiles
 
