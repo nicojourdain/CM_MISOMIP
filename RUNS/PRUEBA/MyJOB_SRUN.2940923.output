@@ -1,0 +1,126 @@
+Starting at Thu Apr 27 12:19:45 CEST 2017
+Running on hosts: n3215
+Running on 1 nodes.
+Running on 24 processors.
+Current working directory is /home/imerino/CM_MISOMIP/RUNS/PRUEBA
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ELMER SOLVER (v 8.2) STARTED AT: 2017/04/27 12:19:46
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+MAIN: 
+MAIN: =============================================================
+MAIN: ElmerSolver finite element software, Welcome!
+MAIN: This program is free software licensed under (L)GPL
+MAIN: Copyright 1st April 1995 - , CSC - IT Center for Science Ltd.
+MAIN: Webpage http://www.csc.fi/elmer, Email elmeradm@csc.fi
+MAIN: Version: 8.2 (Rev: 1ae908a, Compiled: 2017-02-04)
+MAIN:  Running in parallel using 24 tasks.
+MAIN:  MUMPS library linked in.
+MAIN:  Intel MKL linked in.
+MAIN: =============================================================
+MAIN: 
+MAIN: 
+MAIN: -------------------------------------
+MAIN: Reading Model: Ice1r1.sif
+LoadInputFile: Scanning input file: Ice1r1.sif
+LoadInputFile: Loading input file: Ice1r1.sif
+Model Input:  Unlisted keyword: [sea level] in section: [constants]
+Model Input:  Unlisted keyword: [water density] in section: [constants]
+Model Input:  Unlisted keyword: [restart before initial conditions] in section: [simulation]
+Model Input:  Unlisted keyword: [meltfactor] in section: [simulation]
+Model Input:  Unlisted keyword: [melt] in section: [initial condition 1]
+Model Input:  Unlisted keyword: [top surface accumulation] in section: [body force 1]
+Model Input:  Unlisted keyword: [water pressure] in section: [body force 1]
+Loading user function library: [./Executables/USF_WaterPressure]...[WaterPressure]
+Model Input:  Unlisted keyword: [ssastar integrated viscosity] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa mean viscosity] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa mean density] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa critical thickness] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa friction law] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa friction exponent] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa friction parameter] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa friction linear velocity] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa friction post-peak] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa friction maximum value] in section: [material 1]
+Model Input:  Unlisted keyword: [min h] in section: [material 1]
+Model Input:  Unlisted keyword: [nonlinear system newton max divergent iterations] in section: [solver 3]
+Model Input:  Unlisted keyword: [sub-element gl parameterization] in section: [solver 3]
+Model Input:  Unlisted keyword: [gl integration points number] in section: [solver 3]
+Model Input:  Unlisted keyword: [solve ssa star] in section: [solver 3]
+Model Input:  Unlisted keyword: [ssa star internal viscosity integration] in section: [solver 3]
+Model Input:  Unlisted keyword: [ssa star integrations levels] in section: [solver 3]
+Model Input:  Unlisted keyword: [ssastar integration levels ratio] in section: [solver 3]
+Model Input:  Unlisted keyword: [compute dhdt] in section: [solver 4]
+Model Input:  Unlisted keyword: [x dim name] in section: [solver 7]
+Model Input:  Unlisted keyword: [y dim name] in section: [solver 7]
+Model Input:  Unlisted keyword: [x var name] in section: [solver 7]
+Model Input:  Unlisted keyword: [y var name] in section: [solver 7]
+Model Input:  Unlisted keyword: [x epsilon] in section: [solver 7]
+Model Input:  Unlisted keyword: [y epsilon] in section: [solver 7]
+Model Input:  Unlisted keyword: [interpolation bias] in section: [solver 7]
+Model Input:  Unlisted keyword: [interpolation multiplier] in section: [solver 7]
+Model Input:  Unlisted keyword: [is time counter] in section: [solver 7]
+Model Input:  Unlisted keyword: [enable scaling] in section: [solver 7]
+Model Input:  Unlisted keyword: [ssavelocity 2] in section: [boundary condition 1]
+Model Input:  Unlisted keyword: [calving front] in section: [boundary condition 2]
+Model Input:  Unlisted keyword: [ssavelocity 2] in section: [boundary condition 3]
+Model Input:  Unlisted keyword: [ssavelocity 1] in section: [boundary condition 4]
+Model Input:  Unlisted keyword: [ssavelocity 2] in section: [boundary condition 4]
+0
+
+hola
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Results/Ice1r1/ice1r10002.pvtu
+args
+Interpolating Elmer to NEMO grid
+           
+Elmer grid is found in; 
+        /scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Results/Ice1r1/ice1r10002.pvtu
+350000 640000 0 80000 
+OPEN NETCDF.....
+NetCDF dims 242 x 42
+Reading Netcdf
+

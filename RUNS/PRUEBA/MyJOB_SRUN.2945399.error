@@ -1,0 +1,222 @@
+Currently Loaded Modulefiles:
+  1) c/intel/.15.6.233            7) intelmpi/5.1.3.258
+  2) c++/intel/.15.6.233          8) szip/2.1
+  3) fortran/intel/.15.6.233      9) hdf5/1.8.17
+  4) mkl/15.6.233                10) netcdf/4.4.0_fortran-4.4.2
+  5) idb/15.6.233                11) cmake/3.5.2
+  6) intel/15.6.233
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: undefined symbol: messages_mp_message_
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+.//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/share/elmersolver/lib//scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Executables//Flotation.so: cannot open shared object file: No such file or directory
+/var/spool/slurmd/job2945399/slurm_script: line 45: ./scriptAfterRun.sh: No such file or directory
+awk: fatal: cannot open file `output.out' for reading (No such file or directory)
+awk: fatal: cannot open file `output.out' for reading (No such file or directory)
+mv: cannot stat '/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Mesh/*vtu': No such file or directory
+remove module cmake/3.5.2 (tool cmake)
+remove module netcdf/4.4.0_fortran-4.4.2 (Netcdf)
+remove module szip/2.1 (szip)
+remove module hdf5/1.8.17 (HDF5/1.8.17)
+remove module impi/5.1.3.258 (intelmpi)
+remove module mkl/composer_xe_2015.6.233/linux (Intel MKL)
+remove module idb/composer_xe_2015.6.233/linux (Intel Debugger)
+remove module intel/15.6.233 (Intel Compiler Suite)
+ModuleCmd_Load.c(213):ERROR:105: Unable to locate a modulefile for '/opt/modules/modulefiles/oscar-modules'
+load module mkl/compilers_and_libraries_2017.0.098/linux (Intel MKL)
+load module idb/compilers_and_libraries_2017.0.098/linux (Intel Debugger)
+load module intel/17.0 (Intel Compiler Suite)
+load module impi/5.1.3.258 (intelmpi)
+[00;32mModule szip/2.1 compiled with intel/17.0 and intelmpi/5.1.3.258[0m
+load module szip/2.1 (szip)
+[00;32mModule hdf5/1.8.18 compiled with intel/17.0 and intelmpi/5.1.3.258[0m
+load module hdf5/1.8.18 (HDF5/1.8.18)
+ 	 You have chosen intel/17.0  
+ 	 You have chosen intelmpi/5.1.3.258  
+ 	 You have chosen hdf5/1.8.18  
+ 	 You have chosen netcdf/4.4.0_fortran-4.4.2  
+ Checking the directory /opt/software/occigen/libraries/netcdf/4.4.0_fortran-4.4.2/hdf5/1.8.18/intel/17.0/intelmpi/5.1.3.258/lib
+ Your configuration hdf5 1.8.18 compiler 17.0 MPI 5.1.3.258 is available for this release of netcdf
+	====================================================================================================
+	              Netcdf C environment               
+	=================================================
+ 	  see the preset environment variables  NETCDFHOME  NETCDF_LDFLAGS NETCDF_INCDIR  NETCDF_LIBDIR   
+	====================================================================================================
+	====================================================================================================
+	            Netcdf Fortran environment           
+	=================================================
+	   see the preset environment variables  NETCDFFHOME  NETCDFF_LDFLAGS NETCDFF_INCDIR  NETCDFF_LIBDIR   
+	====================================================================================================
+load module netcdf/4.4.0_fortran-4.4.2 (Netcdf)
+remove module cmake/3.5.2 (tool cmake)
+remove module netcdf/4.4.0_fortran-4.4.2 (Netcdf)
+remove module szip/2.1 (szip)
+remove module hdf5/1.8.17 (HDF5/1.8.17)
+remove module impi/5.1.3.258 (intelmpi)
+remove module mkl/composer_xe_2015.6.233/linux (Intel MKL)
+remove module idb/composer_xe_2015.6.233/linux (Intel Debugger)
+remove module intel/15.6.233 (Intel Compiler Suite)
+load module mkl/compilers_and_libraries_2017.0.098/linux (Intel MKL)
+load module idb/compilers_and_libraries_2017.0.098/linux (Intel Debugger)
+load module intel/17.0 (Intel Compiler Suite)
+load module openmpi-icc/2.0.1 (openmpi)
+[00;32mModule szip/2.1 compiled with intel/17.0 and openmpi/intel/2.0.1[0m
+load module szip/2.1 (szip)
+[00;32mModule hdf5/1.8.17 compiled with intel/17.0 and openmpi/intel/2.0.1[0m
+load module hdf5/1.8.17 (HDF5/1.8.17)
+ 	 You have chosen intel/17.0  
+ 	 You have chosen openmpi/intel/2.0.1  
+ 	 You have chosen hdf5/1.8.17  
+ 	 You have chosen netcdf/4.4.0_fortran-4.4.2  
+ Checking the directory /opt/software/occigen/libraries/netcdf/4.4.0_fortran-4.4.2/hdf5/1.8.17/intel/17.0/openmpi/intel/2.0.1/lib
+ Your configuration hdf5 1.8.17 compiler 17.0 MPI intel/2.0.1 is available for this release of netcdf
+	====================================================================================================
+	              Netcdf C environment               
+	=================================================
+ 	  see the preset environment variables  NETCDFHOME  NETCDF_LDFLAGS NETCDF_INCDIR  NETCDF_LIBDIR   
+	====================================================================================================
+	====================================================================================================
+	            Netcdf Fortran environment           
+	=================================================
+	   see the preset environment variables  NETCDFFHOME  NETCDFF_LDFLAGS NETCDFF_INCDIR  NETCDFF_LIBDIR   
+	====================================================================================================
+load module netcdf/4.4.0_fortran-4.4.2 (Netcdf)
