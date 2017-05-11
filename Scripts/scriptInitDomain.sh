@@ -25,6 +25,7 @@ MeshPath=<MeshNamePath>
 
 mkdir -p $MeshPath/Results/$name
 
+rm -r $MeshPath/RESTART
 ln -sf $PATH_RESTART/$caseTest/Results/$nameRestart $MeshPath/RESTART
 echo $PATH_RESTART/$caseTest/Results/$nameRestart
 Restart=../RESTART/$nameRestart.result
@@ -67,5 +68,5 @@ cat $slurmScketch | sed -e "s#<jobName>#$jobName#g" \
 START_FROM_RST=$2
 RST_FILE=$3
 
-sbatch $slurmFile 1 $CALL_NEMO "DUMMY_MELT_FILE" $START_FROM_RST $RST_FILE
+sbatch $slurmFile 1 $CALL_NEMO "DUMMY_MELT_FILE" $START_FROM_RST $RST_FILE 1
 
