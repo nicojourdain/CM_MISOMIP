@@ -45,6 +45,7 @@ MISOMIP_HOMEDIR=<MISOMIP_HOMEDIR>
 
 START_FROM_RESTART=$4
 RST_FILE=$5
+NRUN=$6
 
 PATH_MELT_FILE=$3
 Melt_Rate_File="$(ls -t $PATH_MELT_FILE/*SBC* | head -1)"
@@ -62,6 +63,17 @@ echo "RUNfile::" $Melt_Rate_File
 RUNFILE="$(ls -t $WORKPATH/*.output | head -1)"
 $MISOMIP_HOMEDIR/read_write_Elmer_run_info.sh $RUNFILE
 #echo $1 >> Run_ELMER.db
+
+$MISOMIP_HOMEDIR/write_coupling_run_info.sh 0 0 $NRUN $NRUN $RUNFILE
+stat=$?
+
+echo HOLAAA $stat
+
+if [ ! $stat == 0 ];
+then
+    echo 'ERROR IN ELMER SIMULATION ---> EXIT'
+    exit
+fi
 
 LAST_ELMER_OUTPUT="$(ls -t <RUN_ELMER_PATH>/<RUN>/Results/<jobName>/*pvtu | head -1)"
 
@@ -86,5 +98,6 @@ $MISOMIP_HOMEDIR/scriptWriteISFDraft.sh $LAST_ELMER_OUTPUT $1
 
 if [ $2 -eq 1 ]; then
    cd $PATH_NEMO_RUN
+   $MISOMIP_HOMEDIR/write_coupling_run_info.sh $(( NRUN + 1 )) 0 0 0 0
    jobid=$(sbatch --parsable run_nemo_ISOMIP.sh $START_FROM_RESTART $RST_FILE)
 fi

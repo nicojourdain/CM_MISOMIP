@@ -74,6 +74,9 @@ cat Scripts/scriptInitDomain.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<MeshNamePath>#$WORKDIR_ELMER/$1#g" > $ELMER_WORK_PATH/scriptInitDomain.sh
 chmod 755 $ELMER_WORK_PATH/scriptInitDomain.sh
 
+cat Scripts/write_coupling_run_info.sh | sed -e "s#<HOMEDIR_MISOMIP>#$HOMEDIR_MISOMIP#g" > $HOMEDIR_MISOMIP/write_coupling_run_info.sh
+chmod 755 $HOMEDIR_MISOMIP/write_coupling_run_info.sh
+
 cat Scripts/script_Exec_MISOMIP.sh | sed -e "s#<run>#$1#g" \
 		 -e "s#<NEMO_RUN>#$WORKDIR_NEMO/run/$1#g" \
                  -e "s#<ELMER_RUN>#$ELMER_WORK_PATH#g" > $HOMEDIR_MISOMIP/script_Exec_MISOMIP.sh
@@ -93,11 +96,12 @@ cd $WORKDIR_NEMO/run/$1
 mkdir -p ISF_DRAFT_FROM_ELMER
 cat run_nemo_ISOMIP.sh | sed -e "s#<CASE_NAME>#$1#g"  \
                  -e "s#<DAYS_NEMO>#$NEMO_DAYS_RUN#g" \
+                 -e "s#<MISOMIP_WORK_PATH>#$HOMEDIR_MISOMIP#g" \
 		-e "s#<ELMER_WORK_PATH>#$ELMER_WORK_PATH#g"> temp.sh
 mv temp.sh run_nemo_ISOMIP.sh
 chmod 755 run_nemo_ISOMIP.sh
 
-ln -sf $WORKDIR_NEMO $HOMEDIR_MISOMIP/WORK_NEMO
+ln -sf $WORKDIR_NEMO/run/$1 $HOMEDIR_MISOMIP/WORK_NEMO
 ln -sf $ELMER_WORK_PATH $HOMEDIR_MISOMIP/WORK_ELMER
 
 #SetFiles

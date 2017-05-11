@@ -98,6 +98,6 @@ cat $slurmScketch | sed -e "s#<jobName>#$jobName#g" \
 jobidComp=$2
 PATH_MELT_FILE=$3
 
-sbatch --dependency=afterany:$jobidComp $slurmFile $(( number +1 )) $CALL_NEMO $PATH_MELT_FILE 0 "DUMMY_RST_FILE"
+sbatch --dependency=afterany:$jobidComp $slurmFile $(( number +1 )) $CALL_NEMO $PATH_MELT_FILE 0 "DUMMY_RST_FILE" $number
 
 
