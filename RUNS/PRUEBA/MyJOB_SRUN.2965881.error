@@ -1,0 +1,35 @@
+No Modulefiles Currently Loaded.
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+/home/imerino/CODES/Elmer_Git/install/bin/ElmerSolver_mpi: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+srun: error: n3751: tasks 0-23: Exited with exit code 127
+srun: Terminating job step 2965881.0
+/var/spool/slurmd/job2965881/slurm_script: line 45: ./scriptAfterRun.sh: No such file or directory
+awk: fatal: cannot open file `output.out' for reading (No such file or directory)
+awk: fatal: cannot open file `output.out' for reading (No such file or directory)
+mv: cannot stat '/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Mesh/*vtu': No such file or directory
+ls: cannot access /scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Results/Ice1r4/*pvtu: No such file or directory
+./fromVTKtoElmer: error while loading shared libraries: libimf.so: cannot open shared object file: No such file or directory
+mv: cannot stat 'temp.nc': No such file or directory
+No Modulefiles Currently Loaded.

@@ -1,0 +1,447 @@
+Starting at Tue May  2 00:41:19 CEST 2017
+Running on hosts: n3751
+Running on 1 nodes.
+Running on 24 processors.
+Current working directory is /home/imerino/CM_MISOMIP/RUNS/PRUEBA
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ELMER SOLVER (v 8.2) STARTED AT: 2017/05/02 00:41:21
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+ParCommInit:  Initialize #PEs:           24
+MAIN: 
+MAIN: =============================================================
+MAIN: ElmerSolver finite element software, Welcome!
+MAIN: This program is free software licensed under (L)GPL
+MAIN: Copyright 1st April 1995 - , CSC - IT Center for Science Ltd.
+MAIN: Webpage http://www.csc.fi/elmer, Email elmeradm@csc.fi
+MAIN: Version: 8.2 (Rev: 3e9803d, Compiled: 2017-04-28)
+MAIN:  Running in parallel using 24 tasks.
+MAIN:  MUMPS library linked in.
+MAIN:  Intel MKL linked in.
+MAIN: =============================================================
+MAIN: 
+MAIN: 
+MAIN: -------------------------------------
+MAIN: Reading Model: Ice1r4.sif
+LoadInputFile: Scanning input file: Ice1r4.sif
+LoadInputFile: Loading input file: Ice1r4.sif
+Model Input:  Unlisted keyword: [sea level] in section: [constants]
+Model Input:  Unlisted keyword: [water density] in section: [constants]
+Model Input:  Unlisted keyword: [restart before initial conditions] in section: [simulation]
+Model Input:  Unlisted keyword: [meltfactor] in section: [simulation]
+Model Input:  Unlisted keyword: [melt] in section: [initial condition 1]
+Model Input:  Unlisted keyword: [top surface accumulation] in section: [body force 1]
+Model Input:  Unlisted keyword: [water pressure] in section: [body force 1]
+Loading user function library: [./Executables/USF_WaterPressure]...[WaterPressure]
+Model Input:  Unlisted keyword: [ssastar integrated viscosity] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa mean viscosity] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa mean density] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa critical thickness] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa friction law] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa friction exponent] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa friction parameter] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa friction linear velocity] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa friction post-peak] in section: [material 1]
+Model Input:  Unlisted keyword: [ssa friction maximum value] in section: [material 1]
+Model Input:  Unlisted keyword: [min h] in section: [material 1]
+Model Input:  Unlisted keyword: [nonlinear system newton max divergent iterations] in section: [solver 3]
+Model Input:  Unlisted keyword: [sub-element gl parameterization] in section: [solver 3]
+Model Input:  Unlisted keyword: [gl integration points number] in section: [solver 3]
+Model Input:  Unlisted keyword: [solve ssa star] in section: [solver 3]
+Model Input:  Unlisted keyword: [ssa star internal viscosity integration] in section: [solver 3]
+Model Input:  Unlisted keyword: [ssa star integrations levels] in section: [solver 3]
+Model Input:  Unlisted keyword: [ssastar integration levels ratio] in section: [solver 3]
+Model Input:  Unlisted keyword: [compute dhdt] in section: [solver 4]
+Model Input:  Unlisted keyword: [draft file] in section: [solver 7]
+Model Input:  Unlisted keyword: [melt rates file] in section: [solver 7]
+Model Input:  Unlisted keyword: [ssavelocity 2] in section: [boundary condition 1]
+Model Input:  Unlisted keyword: [calving front] in section: [boundary condition 2]
+Model Input:  Unlisted keyword: [ssavelocity 2] in section: [boundary condition 3]
+Model Input:  Unlisted keyword: [ssavelocity 1] in section: [boundary condition 4]
+Model Input:  Unlisted keyword: [ssavelocity 2] in section: [boundary condition 4]
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckTimer: Requesting time from non-existing timer: LoadMesh
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckTimer: Requesting time from non-existing timer: MeshStabParams
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+WARNING:: CheckLinearSolverOptions: Only MUMPS and CPardiso direct solver interface implemented in parallel, trying MUMPS!
+MAIN: 
+MAIN: -------------------------------------
+MAIN:  Time: 1/6   4204.39999999939
+MAIN: -------------------------------------
+MAIN: 
+EffectivePressure: Constant >Gravity< not found. Setting to -9.746289e15
+USF_WaterPressure: Constant >Gravity< not found. Setting to -9.746289e15
+SSASolver-SSABasalSolver: Memory allocation done.
+ComputeChange: NS (ITER=1) (NRM,RELC): (  220.77732      2.0000000     ) :: ssa
+ComputeChange: NS (ITER=2) (NRM,RELC): (  220.66808     0.49494650E-03 ) :: ssa
+ComputeChange: NS (ITER=3) (NRM,RELC): (  220.61212     0.25361996E-03 ) :: ssa
+ComputeChange: NS (ITER=4) (NRM,RELC): (  220.61525     0.14207967E-04 ) :: ssa
+ComputeChange: NS (ITER=5) (NRM,RELC): (  220.61525     0.74886194E-09 ) :: ssa
+ComputeChange: NS (ITER=2) (NRM,RELC): (  818.13767      2.0000000     ) :: thickness
+ComputeChange: NS (ITER=4) (NRM,RELC): (  818.13767      0.0000000     ) :: thickness
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+MAIN: 
+MAIN: -------------------------------------
+MAIN:  Time: 2/6   4204.49999999939
+MAIN: Estimated time left: 30.5 seconds
+MAIN: -------------------------------------
+MAIN: 
+EffectivePressure: Constant >Gravity< not found. Setting to -9.746289e15
+ComputeChange: NS (ITER=1) (NRM,RELC): (  220.37019     0.11114316E-02 ) :: ssa
+ComputeChange: NS (ITER=2) (NRM,RELC): (  220.30416     0.29966460E-03 ) :: ssa
+ComputeChange: NS (ITER=3) (NRM,RELC): (  220.36524     0.27719671E-03 ) :: ssa
+ComputeChange: NS (ITER=4) (NRM,RELC): (  220.36861     0.15288742E-04 ) :: ssa
+ComputeChange: NS (ITER=5) (NRM,RELC): (  220.36861     0.17864785E-08 ) :: ssa
+ComputeChange: NS (ITER=2) (NRM,RELC): (  817.76789     0.45208747E-03 ) :: thickness
+ComputeChange: NS (ITER=4) (NRM,RELC): (  817.76789      0.0000000     ) :: thickness
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+MAIN: 
+MAIN: -------------------------------------
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+MAIN:  Time: 3/6   4204.59999999939
+MAIN: Estimated time left: 21.5 seconds
+MAIN: -------------------------------------
+MAIN: 
+EffectivePressure: Constant >Gravity< not found. Setting to -9.746289e15
+ComputeChange: NS (ITER=1) (NRM,RELC): (  220.14614     0.10100324E-02 ) :: ssa
+ComputeChange: NS (ITER=2) (NRM,RELC): (  220.10198     0.20061291E-03 ) :: ssa
+ComputeChange: NS (ITER=3) (NRM,RELC): (  220.21734     0.52396014E-03 ) :: ssa
+ComputeChange: NS (ITER=4) (NRM,RELC): (  220.22067     0.15147423E-04 ) :: ssa
+ComputeChange: NS (ITER=5) (NRM,RELC): (  220.22067     0.17597170E-08 ) :: ssa
+ComputeChange: NS (ITER=2) (NRM,RELC): (  817.40119     0.44851753E-03 ) :: thickness
+ComputeChange: NS (ITER=4) (NRM,RELC): (  817.40119      0.0000000     ) :: thickness
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+MAIN: 
+MAIN: -------------------------------------
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+MAIN:  Time: 4/6   4204.69999999939
+MAIN: Estimated time left: 15.2 seconds
+MAIN: -------------------------------------
+MAIN: 
+EffectivePressure: Constant >Gravity< not found. Setting to -9.746289e15
+ComputeChange: NS (ITER=1) (NRM,RELC): (  220.01245     0.94595125E-03 ) :: ssa
+ComputeChange: NS (ITER=2) (NRM,RELC): (  219.98417     0.12857091E-03 ) :: ssa
+ComputeChange: NS (ITER=3) (NRM,RELC): (  220.13690     0.69405184E-03 ) :: ssa
+ComputeChange: NS (ITER=4) (NRM,RELC): (  220.14018     0.14912320E-04 ) :: ssa
+ComputeChange: NS (ITER=5) (NRM,RELC): (  220.14018     0.17346064E-08 ) :: ssa
+ComputeChange: NS (ITER=2) (NRM,RELC): (  817.03754     0.44498009E-03 ) :: thickness
+ComputeChange: NS (ITER=4) (NRM,RELC): (  817.03754      0.0000000     ) :: thickness
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+MAIN: 
+MAIN: -------------------------------------
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+MAIN:  Time: 5/6   4204.79999999939
+MAIN: Estimated time left: 10.1 seconds
+MAIN: -------------------------------------
+MAIN: 
+EffectivePressure: Constant >Gravity< not found. Setting to -9.746289e15
+ComputeChange: NS (ITER=1) (NRM,RELC): (  219.95015     0.86363108E-03 ) :: ssa
+ComputeChange: NS (ITER=2) (NRM,RELC): (  219.94075     0.42712941E-04 ) :: ssa
+ComputeChange: NS (ITER=3) (NRM,RELC): (  220.13907     0.90127510E-03 ) :: ssa
+ComputeChange: NS (ITER=4) (NRM,RELC): (  220.14231     0.14726025E-04 ) :: ssa
+ComputeChange: NS (ITER=5) (NRM,RELC): (  220.14231     0.16640660E-08 ) :: ssa
+ComputeChange: NS (ITER=2) (NRM,RELC): (  816.67691     0.44147998E-03 ) :: thickness
+ComputeChange: NS (ITER=4) (NRM,RELC): (  816.67691      0.0000000     ) :: thickness
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+MAIN: 
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+MAIN: -------------------------------------
+MAIN:  Time: 6/6   4204.89999999939
+MAIN: Estimated time left:  5.0 seconds
+MAIN: -------------------------------------
+MAIN: 
+EffectivePressure: Constant >Gravity< not found. Setting to -9.746289e15
+ComputeChange: NS (ITER=1) (NRM,RELC): (  219.95812     0.83702863E-03 ) :: ssa
+ComputeChange: NS (ITER=2) (NRM,RELC): (  219.96061     0.11313688E-04 ) :: ssa
+ComputeChange: NS (ITER=3) (NRM,RELC): (  220.19121     0.10478269E-02 ) :: ssa
+ComputeChange: NS (ITER=4) (NRM,RELC): (  220.19444     0.14653641E-04 ) :: ssa
+ComputeChange: NS (ITER=5) (NRM,RELC): (  220.19444     0.15899457E-08 ) :: ssa
+ComputeChange: NS (ITER=2) (NRM,RELC): (  816.31928     0.43800786E-03 ) :: thickness
+ComputeChange: NS (ITER=4) (NRM,RELC): (  816.31928      0.0000000     ) :: thickness
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+NUMERICAL ERROR:: SolveEquations: Coupled system did not converge
+ElmerSolver: *** Elmer Solver: ALL DONE ***
+ElmerSolver: The end
+SOLVER TOTAL TIME(CPU,REAL):        28.55       38.25
+ELMER SOLVER FINISHED AT: 2017/05/02 00:41:59
+0
+
+hola
+/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Results/Ice1r4/ice1r40002.pvtu
+args
+Interpolating Elmer to NEMO grid
+           
+Elmer grid is found in; 
+        /scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP/PRUEBA/Results/Ice1r4/ice1r40002.pvtu
+350000 640000 0 80000 
+OPEN NETCDF.....
+NetCDF dims 242 x 42
+Reading Netcdf
+
