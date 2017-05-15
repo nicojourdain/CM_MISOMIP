@@ -9,11 +9,13 @@ INTERVALS_ELMER=5
 TIME_STEP_ELMER=0.1
 NUM_PARTITIONS_ELMER=24
 NUM_NODES_ELMER=1
-PATH_RESTART=/scratch/cnt0021/gge6066/imerino/MISMIP+
-CASE_RESTART=Test500m_Schoof_SSAStar
-RUN_RESTART=Run0
+PATH_RESTART=/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP
+CASE_RESTART=SPIUP
+RUN_RESTART=Ice1r60
 
-NEMO_DAYS_RUN=190
+NEMO_DAYS_RUN=31
+
+FORCING_CONDS='WARM'
 
 CASE_RESTART_PATH=/scratch/cnt0021/gge6066/imerino/MISMIP+/$CASE_RESTART/Results/$RUN_RESTART
 BATHY_FILE=/scratch/cnt0021/gge6066/imerino/NEMO_MISOMIP/input/bathy_meter.nc
@@ -96,6 +98,7 @@ cd $WORKDIR_NEMO/run/$1
 mkdir -p ISF_DRAFT_FROM_ELMER
 cat run_nemo_ISOMIP.sh | sed -e "s#<CASE_NAME>#$1#g"  \
                  -e "s#<DAYS_NEMO>#$NEMO_DAYS_RUN#g" \
+                 -e "s#<FORCING_CONDS>#$FORCING_CONDS#g" \
                  -e "s#<MISOMIP_WORK_PATH>#$HOMEDIR_MISOMIP#g" \
 		-e "s#<ELMER_WORK_PATH>#$ELMER_WORK_PATH#g"> temp.sh
 mv temp.sh run_nemo_ISOMIP.sh
