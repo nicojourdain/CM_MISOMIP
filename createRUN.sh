@@ -87,6 +87,12 @@ cat Scripts/script_SpinUp_MISOMIP.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<ELMER_RUN>#$ELMER_WORK_PATH#g" > $HOMEDIR_MISOMIP/script_SpinUp_MISOMIP.sh
 chmod 755 $HOMEDIR_MISOMIP/script_SpinUp_MISOMIP.sh
 
+cat Scripts/script_Start_From_Restart.sh | sed -e "s#<run>#$1#g" \
+                 -e "s#<NEMO_RUN>#$WORKDIR_NEMO/run/$1#g" \
+                 -e "s#<RST_FILE>#$RST_FILE/run/$1#g" \
+                 -e "s#<ELMER_RUN>#$ELMER_WORK_PATH#g" > $HOMEDIR_MISOMIP/script_Start_From_Restart.sh
+chmod 755 $HOMEDIR_MISOMIP/script_Start_From_Restart.sh
+
 cp Scripts/read_write_Elmer_run_info.sh $HOMEDIR_MISOMIP/read_write_Elmer_run_info.sh
 chmod 755 $HOMEDIR_MISOMIP/read_write_Elmer_run_info.sh
 
