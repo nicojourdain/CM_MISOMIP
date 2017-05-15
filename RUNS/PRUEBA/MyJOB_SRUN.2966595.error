@@ -1,9 +1,0 @@
-Currently Loaded Modulefiles:
-  1) c/intel/.17.0                6) intel/17.0
-  2) c++/intel/.17.0              7) openmpi/intel/2.0.1
-  3) fortran/intel/.17.0          8) szip/2.1
-  4) mkl/17.0                     9) hdf5/1.8.17
-  5) idb/17.0                    10) netcdf/4.4.0_fortran-4.4.2
-slurmstepd: *** JOB 2966595 ON n3967 CANCELLED AT 2017-05-02T10:48:15 ***
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: *** STEP 2966595.0 ON n3967 CANCELLED AT 2017-05-02T10:48:15 ***
