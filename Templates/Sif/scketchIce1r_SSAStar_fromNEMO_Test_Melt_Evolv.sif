@@ -1,0 +1,282 @@
+$name="<name>"
+
+$yearinsec = 31536000.0
+!$rhoi = 900.0/(1.0e6*yearinsec^2)   
+$rhoi=9.218352230172528E-019
+!$rhow = 1000.0/(1.0e6*yearinsec^2)
+$rhow=1.032294781330867E-018
+!$gravity = -9.80*yearinsec^2
+$gravity=-9759227869980866.0
+$n = 3.0
+$m = 0.3333333333
+!$C = 1.0e-2
+$C = <C>
+!$C = 0.03165176
+!$A=3.1536
+!A given in MPa-3/s 2e-17*1e6^(-3)
+$A=20.0
+!$eta = (2.0*A)^(-1.0/n)
+$eta=<eta>
+!$eta=0.2924017738212866
+$zsl=0.0
+$CCou=<CCou>
+$mltrate=<meltRate>
+
+Header
+  Mesh DB "<MeshPath>" "<mesh>"
+End
+
+Constants
+  sea level = Real 0.0
+  water density = Real 1.032294781330867E-018
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Simulation
+  Coordinate System  = Cartesian 2D 
+  Simulation Type = Transient     
+
+  Timestepping Method = "bdf"
+  BDF Order = 1
+  Output Intervals = <outIntervals>
+  Timestep Intervals = <Intervals>
+  Timestep Sizes = <TimeStep>
+
+  Steady State Convergence Tolerance = Real 2.0
+
+  Steady State Min Iterations = Integer 1
+  Steady State Max Iterations = Integer 2
+
+  Post File = "$name$.vtu"
+  OutPut File = "<ResultsPath>/$name".result"
+  Binary Output = Logical True
+
+  Restart File = "<Restart>"
+  Restart Position = Integer <RestartPosition>
+  Restart Before Initial Conditions = Logical False
+  
+  MeltFactor = REAL $mltrate
+
+  max output level = 3
+
+  Initialize Dirichlet Conditions = logical False
+
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Body 1
+  Equation = 1
+  Body Force = 1
+  Material = 1
+  Initial Condition = 1
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Initial Condition 1
+  Melt = Real -0.0
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Body Force 1
+  Flow BodyForce 1 = Real 0.0                          
+  Flow BodyForce 2 = Real 0.0                          
+  Flow BodyForce 3 = Real $gravity
+  Top Surface Accumulation = Real <accum>
+  !Bottom Surface Accumulation = Variable Coordinate 1, Coordinate 2
+     !Real procedure "<ExecPath>/USF_MISOMIP_Melt" "MeltRates"
+  Bottom Surface Accumulation = equals Melt
+
+  !Water Pressure for effective pressure calculation
+    Water Pressure = Variable Zb
+     Real procedure "<ExecPath>/USF_WaterPressure" "WaterPressure"
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Material 1
+
+! Material properties
+  Viscosity = Real $eta
+  Viscosity Exponent = Real 0.3333333333333333333
+  Critical Shear Rate = Real 1.0e-16
+
+  SSAStar Integrated Viscosity = Real $eta
+
+  SSA Mean Viscosity = Real $eta
+  SSA Mean Density = Real $rhoi
+
+
+  SSA Critical Thickness = Real 1.0e00
+
+ ! slip coeffs
+  SSA Friction Law = String "coulomb"
+  SSA Friction Exponent = Real $m
+  SSA Friction Parameter = Real $C
+  SSA Friction Linear Velocity = REAL 1.0e0
+  !SSA Min Effective Pressure = Real 1.0e-6
+
+  SSA Friction Post-Peak = Real 1.0
+  SSA Friction Maximum Value = Real $CCou
+
+
+  Min H = Real 1.0e00
+
+!! For Save scalar to compute mass flux (=H*SSA_UV)
+   Flux = Equals H
+End
+
+Solver 1
+   Equation = "MISOMIP_MELT_ITER"
+   Variable = Melt
+   Procedure = "<ExecPath>/MISOMIP_Melt_Consv_Evolv" "MISOMIP_Melt_Consv"
+   !Procedure = "<ExecPath>/MISOMIP_Melt" "MISOMIP_Melt"
+
+   Draft file = File "isf_draft_meter.nc"
+   Melt rates file = File "<MELT_FILE>"
+
+End
+ 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! Apply flotaison; from H compute Zb and Zs
+Solver 2
+   !Exec Solver = never
+   Equation = "Flotation"
+      Variable = GroundedMask
+            Procedure = "<ExecPath>/Flotation" "Flotation"
+End
+
+Solver 3
+!   Exec Solver = never
+   Equation = "EffectivePressure"
+   Variable =  "Effective Pressure"
+   Procedure = "<ExecPath>/EffectivePressure" "EffectivePressure"
+End
+
+
+Solver 4
+   Equation = "SSA"
+   !Exec Solver = never
+   Variable = -dofs 2 "SSAVelocity"
+
+   Procedure = "<ExecPath>/SSAStar" "SSABasalSolver"
+
+   Linear System Solver = Direct
+   Linear System Direct Method = umfpack
+
+   Nonlinear System Max Iterations = 50
+   Nonlinear System Convergence Tolerance  = 1.0e-08
+   Nonlinear System Newton After Iterations = 3
+   Nonlinear System Newton After Tolerance = 1.0e-03
+   Nonlinear System Relaxation Factor = 1.00
+
+   Nonlinear System Newton Max divergent iterations = Integer 4
+
+   Sub-Element GL parameterization = Logical True
+   GL integration points number = Integer 20
+
+   Solve SSA Star = LOGICAL True
+   SSA Star Internal viscosity integration = Logical True
+   SSA Star Integrations levels = Integer 10
+   SSAStar Integration levels ratio = Real 1.0
+
+   Exported Variable 1 = Zs
+   Exported Variable 2 = Zb
+   Exported Variable 3 = bedrock
+   Exported Variable 4 = h
+   Exported Variable 5 = -dofs 1 "Effective Pressure"
+   Exported Variable 6 = Melt
+
+End
+!! Thickness solver
+Solver 5
+   Equation = "Thickness"
+   !Exec Solver = never
+   Variable = -dofs 1 "H"
+
+   Exported Variable 1 = -dofs 1 "H Residual"
+   Exported Variable 2 = DhDt
+
+
+   !Procedure = "<ExecPath>/ThicknessSolver_MT_Melt" "ThicknessSolver"
+   Procedure = "<ExecPath>/ThicknessSolver_Alpha" "ThicknessSolver"
+     Before Linsolve = "EliminateDirichlet" "EliminateDirichlet"
+
+   Linear System Solver = Direct
+   Linear System Direct Method = umfpack
+
+   Linear System Convergence Tolerance = 1.0e-12
+
+! equation is linear if no min/max
+   Nonlinear System Max Iterations = 15
+   Nonlinear System Convergence Tolerance  = 1.0e-09
+   Nonlinear System Relaxation Factor = 1.00
+
+  Apply Dirichlet = Logical True
+  !Stabilization Method = Bubbles
+  Stabilization Method = Stabilized
+  Compute dHdT = Logical True
+ 
+ 
+
+!!  the convection velocity (mean horizontal velocity)
+    Flow Solution Name = String "SSAVelocity"
+End
+
+Solver 6
+   Exec Solver = After Simulation
+   Equation = "FlotationB"
+      Variable = GroundedMask
+            Procedure = "<ExecPath>/Flotation" "Flotation"
+End
+
+Solver 7
+   Exec Solver = Before Simulation
+   Equation = "Flotation3"
+      Variable = GroundedMask
+            Procedure = "<ExecPath>/Flotation" "Flotation"
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Equation 1
+  Active Solvers(7) = 1 2 3 4 5 6 7
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Boundary Condition 1
+  name = "side1"
+  Target Boundaries = 1 
+   
+  Save Scalars = Logical True
+
+    SSAVelocity 2 = Real 0.0
+
+End
+
+Boundary Condition 2
+  name = "calving front"
+  Target Boundaries = 2
+  
+  Save Scalars = Logical True
+
+  Calving Front = Logical True
+
+End
+
+Boundary Condition 3
+  name = "side2"
+  Target Boundaries = 3
+
+  Save Scalars = Logical True
+
+    SSAVelocity 2 = Real 0.0
+End
+
+Boundary Condition 4
+  name = "inflow"
+  Target Boundaries = 4
+
+  Save Scalars = Logical True
+
+  SSAVelocity 1 = Real 0.0
+  SSAVelocity 2 = Real 0.0
+End
