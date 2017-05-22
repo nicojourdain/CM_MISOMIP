@@ -84,6 +84,11 @@ cat Scripts/script_Exec_MISOMIP.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<ELMER_RUN>#$ELMER_WORK_PATH#g" > $HOMEDIR_MISOMIP/script_Exec_MISOMIP.sh
 chmod 755 $HOMEDIR_MISOMIP/script_Exec_MISOMIP.sh
 
+cat Scripts/script_EXP1_MISOMIP.sh | sed -e "s#<run>#$1#g" \
+                 -e "s#<NEMO_RUN>#$WORKDIR_NEMO/run/$1#g" \
+                 -e "s#<ELMER_RUN>#$ELMER_WORK_PATH#g" > $HOMEDIR_MISOMIP/script_EXP1_MISOMIP.sh
+chmod 755 $HOMEDIR_MISOMIP/script_EXP1_MISOMIP.sh
+
 cat Scripts/script_SpinUp_MISOMIP.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<NEMO_RUN>#$WORKDIR_NEMO/run/$1#g" \
                  -e "s#<ELMER_RUN>#$ELMER_WORK_PATH#g" > $HOMEDIR_MISOMIP/script_SpinUp_MISOMIP.sh
