@@ -4,16 +4,21 @@
 NRUN_MAX=10
 
 ELMER_MESH_NAME=MISMIP_REGULAR
+
 FREQ_OUTPUT_ELMER=5
 INTERVALS_ELMER=5
 TIME_STEP_ELMER=0.1
+
 NUM_PARTITIONS_ELMER=24
 NUM_NODES_ELMER=1
-PATH_RESTART=/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP
-CASE_RESTART=SPIUP
-RUN_RESTART=Ice1r60
+
+PATH_RESTART=/scratch/cnt0021/gge6066/imerino/MISMIP+
+CASE_RESTART=Test500m_Schoof_SSAStar
+RUN_RESTART=Run0
 
 NEMO_DAYS_RUN=31
+
+FORCING_EXP_ID=EXP1
 
 FORCING_CONDS='WARM'
 
@@ -84,10 +89,10 @@ cat Scripts/script_Exec_MISOMIP.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<ELMER_RUN>#$ELMER_WORK_PATH#g" > $HOMEDIR_MISOMIP/script_Exec_MISOMIP.sh
 chmod 755 $HOMEDIR_MISOMIP/script_Exec_MISOMIP.sh
 
-cat Scripts/script_EXP1_MISOMIP.sh | sed -e "s#<run>#$1#g" \
+cat Scripts/script_RUN_MISOMIP.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<NEMO_RUN>#$WORKDIR_NEMO/run/$1#g" \
-                 -e "s#<ELMER_RUN>#$ELMER_WORK_PATH#g" > $HOMEDIR_MISOMIP/script_EXP1_MISOMIP.sh
-chmod 755 $HOMEDIR_MISOMIP/script_EXP1_MISOMIP.sh
+                 -e "s#<ELMER_RUN>#$ELMER_WORK_PATH#g" > $HOMEDIR_MISOMIP/script_RUN_MISOMIP.sh
+chmod 755 $HOMEDIR_MISOMIP/script_RUN_MISOMIP.sh
 
 cat Scripts/script_SpinUp_MISOMIP.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<NEMO_RUN>#$WORKDIR_NEMO/run/$1#g" \
@@ -109,7 +114,7 @@ cd $WORKDIR_NEMO/run/$1
 mkdir -p ISF_DRAFT_FROM_ELMER
 cat run_nemo_ISOMIP.sh | sed -e "s#<CASE_NAME>#$1#g"  \
                  -e "s#<DAYS_NEMO>#$NEMO_DAYS_RUN#g" \
-                 -e "s#<FORCING_CONDS>#$FORCING_CONDS#g" \
+                 -e "s#<FORCING_EXP_ID>#$FORCING_EXP_ID#g" \
                  -e "s#<MISOMIP_WORK_PATH>#$HOMEDIR_MISOMIP#g" \
 		-e "s#<ELMER_WORK_PATH>#$ELMER_WORK_PATH#g"> temp.sh
 mv temp.sh run_nemo_ISOMIP.sh
