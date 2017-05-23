@@ -1,4 +1,7 @@
 #!/bin/bash
+
+### Re execute the current experiment until the coupled iteration given as first argument of the sript
+
 run=<run>
 RUN_NEMO=<NEMO_RUN>
 RUN_ELMER=<ELMER_RUN>
