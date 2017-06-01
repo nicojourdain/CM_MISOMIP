@@ -16,7 +16,7 @@ PATH_RESTART=/scratch/cnt0021/gge6066/imerino/MISMIP+
 CASE_RESTART=Test500m_Schoof_SSAStar
 RUN_RESTART=Run0
 
-NEMO_DAYS_RUN=31
+NEMO_DAYS_RUN=191
 
 FORCING_EXP_ID=EXP1
 
@@ -33,6 +33,7 @@ echo "Creating Run $1"
 ISF_DRAFT_GENERIC=$WORKDIR_NEMO/input/isf_draft_meter.nc
 
 From_VTK_TO_NETCDF_PATH=/home/imerino/From_VTK_TO_NETCDF/build/fromVTKtoElmer
+
 #Create folders
 HOMEDIR_MISOMIP=$PWD/RUNS/$1
 mkdir -p $HOMEDIR_MISOMIP
@@ -110,15 +111,17 @@ chmod 755 $HOMEDIR_MISOMIP/read_write_Elmer_run_info.sh
 
 #Set files in Workdir NEMO
 cp $WORKDIR_NEMO/FILES/* $WORKDIR_NEMO/run/$1
-cd $WORKDIR_NEMO/run/$1
-mkdir -p ISF_DRAFT_FROM_ELMER
-cat run_nemo_ISOMIP.sh | sed -e "s#<CASE_NAME>#$1#g"  \
+
+cat Scripts/run_nemo_ISOMIP.sh | sed -e "s#<CASE_NAME>#$1#g"  \
                  -e "s#<DAYS_NEMO>#$NEMO_DAYS_RUN#g" \
                  -e "s#<FORCING_EXP_ID>#$FORCING_EXP_ID#g" \
                  -e "s#<MISOMIP_WORK_PATH>#$HOMEDIR_MISOMIP#g" \
-		-e "s#<ELMER_WORK_PATH>#$ELMER_WORK_PATH#g"> temp.sh
-mv temp.sh run_nemo_ISOMIP.sh
-chmod 755 run_nemo_ISOMIP.sh
+                -e "s#<ELMER_WORK_PATH>#$ELMER_WORK_PATH#g"> temp.sh
+mv temp.sh $WORKDIR_NEMO/run/$1/run_nemo_ISOMIP.sh
+chmod 755 $WORKDIR_NEMO/run/$1/run_nemo_ISOMIP.sh
+
+cd $WORKDIR_NEMO/run/$1
+mkdir -p ISF_DRAFT_FROM_ELMER
 
 ln -sf $WORKDIR_NEMO/run/$1 $HOMEDIR_MISOMIP/WORK_NEMO
 ln -sf $ELMER_WORK_PATH $HOMEDIR_MISOMIP/WORK_ELMER
