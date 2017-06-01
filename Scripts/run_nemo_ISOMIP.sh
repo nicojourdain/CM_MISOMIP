@@ -37,13 +37,17 @@ NDAYS=<DAYS_NEMO>      ## NB: the run is adjusted to give a finite number of mon
                 ##     => 190 allows  2 x 6-month runs per year
                 ##     => 31  allows 12 x 1-month runs per year
 
+
 WORKDIR=`pwd`
 
 RST_START=$1
 
 RST_FILE=$2
 
+FORCING_EXP_ID=<FORCING_EXP_ID>
+
 ELMER_WORK_PATH=<ELMER_WORK_PATH>
+MISOMIP_WORK_PATH=<MISOMIP_WORK_PATH>
 
 STOCKDIR="$SCRATCHDIR/NEMO_MISOMIP/"
 #STOCKDIR="$SHAREDELMER"  #- restart, output directory
@@ -126,6 +130,15 @@ do
   sed -e "s/$/ 0/g" prod_nemo.db > tmp
   mv tmp prod_nemo.db
 done
+fi
+
+# Verify if NEMO is runnning in agreement with the coupled system
+NRUN_COUPLED=$( awk '/Coupled_iter:/ {print $2}' ${MISOMIP_WORK_PATH}/COUPLED_Run.db | tail -1 )
+
+if [ ! $NRUN_COUPLED == $NRUN ]:
+then
+   echo 'NEMO and coupled simulation not in phase ---> STOP'
+   exit
 fi
 
 #####
@@ -353,25 +366,48 @@ done
 rm -f restart.nc #restart_ice.nc #restart.obc
 rm -f dta_temp_y????m??.nc dta_sal_y????m??.nc dta_temp_y????.nc dta_sal_y????.nc dta_temp.nc dta_sal.nc
 
+if [ $YEARm1 -ge 0 ]; then
+  ln -s -v -f ${INPUTDIR}/dta_temp_y0001_${CONFIG}_${FORCING_EXP_ID}.nc dta_temp_y${YEARm1}.nc
+  ln -s -v -f ${INPUTDIR}/dta_sal_y0001_${CONFIG}_${FORCING_EXP_ID}.nc  dta_sal_y${YEARm1}.nc
+fi
+
+ln -s -v -f ${INPUTDIR}/dta_temp_y0001_${CONFIG}_${FORCING_EXP_ID}.nc   dta_temp_y${YEAR}.nc
+ln -s -v -f ${INPUTDIR}/dta_sal_y0001_${CONFIG}_${FORCING_EXP_ID}.nc    dta_sal_y${YEAR}.nc
+ln -s -v -f ${INPUTDIR}/dta_temp_y0000_${CONFIG}_${FORCING_EXP_ID}.nc   dta_temp_y0000.nc
+ln -s -v -f ${INPUTDIR}/dta_sal_y0000_${CONFIG}_${FORCING_EXP_ID}.nc    dta_sal_y0000.nc
+ln -s -v -f ${INPUTDIR}/dta_temp_y0001_${CONFIG}_${FORCING_EXP_ID}.nc dta_temp_y${YEARp1}.nc
+ln -s -v -f ${INPUTDIR}/dta_sal_y0001_${CONFIG}_${FORCING_EXP_ID}.nc  dta_sal_y${YEARp1}.nc
+
+
 
 #IF we are in spinup cold conditions all along the simulation (EXP4-->cold conditions)
-if [ $SPINUP == 1 ];
-then
-    ln -s -v ${INPUTDIR}/dta_temp_y0000_${CONFIG}_EXP4.nc   dta_temp_y${YEAR}.nc
-    ln -s -v ${INPUTDIR}/dta_sal_y0000_${CONFIG}_EXP4.nc    dta_sal_y${YEAR}.nc
-    ln -s -v ${INPUTDIR}/dta_temp_y0001_${CONFIG}_EXP4.nc dta_temp_y${YEARp1}.nc
-    ln -s -v ${INPUTDIR}/dta_sal_y0001_${CONFIG}_EXP4.nc  dta_sal_y${YEARp1}.nc
-else
-    ln -s -v ${INPUTDIR}/dta_temp_y${YEAR}_${CONFIG}_EXP3.nc   dta_temp_y${YEAR}.nc
-    ln -s -v ${INPUTDIR}/dta_sal_y${YEAR}_${CONFIG}_EXP3.nc    dta_sal_y${YEAR}.nc
-    ln -s -v ${INPUTDIR}/dta_temp_y${YEARp1}_${CONFIG}_EXP3.nc dta_temp_y${YEARp1}.nc
-    ln -s -v ${INPUTDIR}/dta_sal_y${YEARp1}_${CONFIG}_EXP3.nc  dta_sal_y${YEARp1}.nc
-fi
+#if [ $FORCING_CONDS == 'COLD' ];
+#then
+#    ln -s -v ${INPUTDIR}/dta_temp_y0001_${CONFIG}_EXP4.nc   dta_temp_y${YEAR}.nc
+#    ln -s -v ${INPUTDIR}/dta_sal_y0001_${CONFIG}_EXP4.nc    dta_sal_y${YEAR}.nc
+#    ln -s -v ${INPUTDIR}/dta_temp_y0000_${CONFIG}_EXP4.nc   dta_temp_y0000.nc
+#    ln -s -v ${INPUTDIR}/dta_sal_y0000_${CONFIG}_EXP4.nc    dta_sal_y0000.nc
+#    ln -s -v ${INPUTDIR}/dta_temp_y0001_${CONFIG}_EXP4.nc dta_temp_y${YEARp1}.nc
+#    ln -s -v ${INPUTDIR}/dta_sal_y0001_${CONFIG}_EXP4.nc  dta_sal_y${YEARp1}.nc
+#    if [ $YEARm1 -ge 0 ]; then
+#       ln -s -v ${INPUTDIR}/dta_temp_y0001_${CONFIG}_EXP4.nc dta_temp_y${YEARm1}.nc
+#       ln -s -v ${INPUTDIR}/dta_sal_y0001_${CONFIG}_EXP4.nc  dta_sal_y${YEARm1}.nc
+#    fi
 
-if [ $YEARm1 -ge 0 ]; then
-  ln -s -v ${INPUTDIR}/dta_temp_y${YEARm1}_${CONFIG}_EXP3.nc dta_temp_y${YEARm1}.nc
-  ln -s -v ${INPUTDIR}/dta_sal_y${YEARm1}_${CONFIG}_EXP3.nc  dta_sal_y${YEARm1}.nc
-fi
+#elif [ $FORCING_CONDS == 'WARM' ];
+#then
+#    ln -s -v ${INPUTDIR}/dta_temp_y0001_${CONFIG}_EXP3.nc   dta_temp_y${YEAR}.nc
+#    ln -s -v ${INPUTDIR}/dta_sal_y0001_${CONFIG}_EXP3.nc    dta_sal_y${YEAR}.nc
+#    ln -s -v ${INPUTDIR}/dta_temp_y0000_${CONFIG}_EXP3.nc   dta_temp_y0000.nc
+#    ln -s -v ${INPUTDIR}/dta_sal_y0000_${CONFIG}_EXP3.nc    dta_sal_y0000.nc
+#    ln -s -v ${INPUTDIR}/dta_temp_y0001_${CONFIG}_EXP3.nc dta_temp_y${YEARp1}.nc
+#    ln -s -v ${INPUTDIR}/dta_sal_y0001_${CONFIG}_EXP3.nc  dta_sal_y${YEARp1}.nc
+#    if [ $YEARm1 -ge 0 ]; then
+#       ln -s -v ${INPUTDIR}/dta_temp_y0001_${CONFIG}_EXP3.nc dta_temp_y${YEARm1}.nc
+#       ln -s -v ${INPUTDIR}/dta_sal_y0001_${CONFIG}_EXP3.nc  dta_sal_y${YEARm1}.nc
+#    fi
+#fi
+
 
 RSTN=`grep "from a restart file" namelist_ref | awk '{print $3}' | sed -e "s/\.//g"`
 NIT_RST=${NITENDM1}
@@ -617,6 +653,8 @@ fi
 
 Melt_Rate_Path=${STOCKDIR}/output/nemo_${CONFIG}_${CASE}/${YEAR}
 ln -sf $WORKDIR/ISF_DRAFT_FROM_ELMER/isf_draft_meter_$(( NRUN - 1)).nc $ELMER_WORK_PATH/isf_draft_meter.nc
+
+$MISOMIP_WORK_PATH/write_coupling_run_info.sh 0 $(( NRUN -1 )) 0 0 'dummyfile' $WORKDIR/OUTPUT_$NRUNm1/ocean.output.$NRUNm1
 
 cd $ELMER_WORK_PATH
 ./scriptIce1rExecute.sh $(( NRUN - 1)) $jobidComp $Melt_Rate_Path
