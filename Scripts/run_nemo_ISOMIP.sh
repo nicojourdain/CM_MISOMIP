@@ -46,6 +46,8 @@ RST_FILE=$2
 
 FORCING_EXP_ID=<FORCING_EXP_ID>
 
+PREFIX_ELMER=<PREFIX_ELMER>
+
 ELMER_WORK_PATH=<ELMER_WORK_PATH>
 MISOMIP_WORK_PATH=<MISOMIP_WORK_PATH>
 
@@ -657,7 +659,13 @@ ln -sf $WORKDIR/ISF_DRAFT_FROM_ELMER/isf_draft_meter_$(( NRUN - 1)).nc $ELMER_WO
 $MISOMIP_WORK_PATH/write_coupling_run_info.sh 0 $(( NRUN -1 )) 0 0 'dummyfile' $WORKDIR/OUTPUT_$NRUNm1/ocean.output.$NRUNm1
 
 cd $ELMER_WORK_PATH
-./scriptIce1rExecute.sh $(( NRUN - 1)) $jobidComp $Melt_Rate_Path
-
+if [ $PREFIX_ELMER == 'Ice1r' ]; then
+   ./scriptIce1rExecute.sh $(( NRUN - 1)) $jobidComp $Melt_Rate_Path
+elif [ $PREFIX_ELMER == 'Ice1a' ]; then
+   ./scriptIce1aExecute.sh $(( NRUN - 1)) $jobidComp $Melt_Rate_Path
+else
+  echo 'ERROR in PREFIX_ELMER, PREFIX_ELMER does not match any of the considered cases case >>>>>>> STOP'
+  exit
+fi
 echo " "
 date

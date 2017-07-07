@@ -9,16 +9,26 @@ FREQ_OUTPUT_ELMER=5
 INTERVALS_ELMER=5
 TIME_STEP_ELMER=0.1
 
+
 NUM_PARTITIONS_ELMER=24
 NUM_NODES_ELMER=1
 
-PATH_RESTART=/scratch/cnt0021/gge6066/imerino/MISMIP+
-CASE_RESTART=Test500m_Schoof_SSAStar
-RUN_RESTART=Run0
+#RESTART PATH SSAStar MISMIP+
+#PATH_RESTART=/scratch/cnt0021/gge6066/imerino/MISMIP+
+#CASE_RESTART=Test500m_Schoof_SSAStar
+#RUN_RESTART=Run0
 
-NEMO_DAYS_RUN=95
+PATH_RESTART=/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP
+CASE_RESTART=IceOcean1r_TEST
+RUN_RESTART=Ice1r200
 
-FORCING_EXP_ID=EXP1
+NEMO_DAYS_RUN=190
+
+FORCING_EXP_ID=EXP4
+#Prefix_Elmer = Ice1r for retreat and warm ocean forcing
+#Prefix_Elmer = Ice1a for readvance and cold ocean forcing
+PREFIX_ELMER='Ice1a'
+RST_FILE='/scratch/cnt0021/gge6066/imerino/NEMO_MISOMIP/run/IceOcean1r_TEST/restart_15846192.nc'
 
 FORCING_CONDS='WARM'
 
@@ -70,6 +80,19 @@ cat Scripts/scriptIce1rExecute.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<MeshNamePath>#$WORKDIR_ELMER/$1#g" > $ELMER_WORK_PATH/scriptIce1rExecute.sh
 chmod 755 $ELMER_WORK_PATH/scriptIce1rExecute.sh
 
+cat Scripts/scriptIce1aExecute.sh | sed -e "s#<run>#$1#g" \
+                 -e "s#<NEMO_RUN>#$WORKDIR_NEMO/run/$1#g" \
+                 -e "s#<NRUN_MAX>#$NRUN_MAX#g" \
+                 -e "s#<HOMEDIR_MISOMIP>#$HOMEDIR_MISOMIP#g" \
+                 -e "s#<OUTPUT_FREQ_ELMER>#$FREQ_OUTPUT_ELMER#g" \
+                 -e "s#<INTERVALS_ELMER>#$INTERVALS_ELMER#g" \
+                 -e "s#<TIME_STEP_ELMER>#$TIME_STEP_ELMER#g" \
+                 -e "s#<numParts>#$NUM_PARTITIONS_ELMER#g" \
+                 -e "s#<numNodes>#$NUM_NODES_ELMER#g" \
+                 -e "s#<Executables>#$WORKDIR_ELMER/$1/Executables/#g" \
+                 -e "s#<MeshNamePath>#$WORKDIR_ELMER/$1#g" > $ELMER_WORK_PATH/scriptIce1aExecute.sh
+chmod 755 $ELMER_WORK_PATH/scriptIce1aExecute.sh
+
 cat Scripts/scriptInitDomain.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<caseTest>#$CASE_RESTART#g" \
                  -e "s#<path_restart>#$PATH_RESTART#g" \
@@ -102,7 +125,7 @@ chmod 755 $HOMEDIR_MISOMIP/script_SpinUp_MISOMIP.sh
 
 cat Scripts/script_Start_From_Restart.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<NEMO_RUN>#$WORKDIR_NEMO/run/$1#g" \
-                 -e "s#<RST_FILE>#$RST_FILE/run/$1#g" \
+                 -e "s#<RESTART_FILE>#$RST_FILE#g" \
                  -e "s#<ELMER_RUN>#$ELMER_WORK_PATH#g" > $HOMEDIR_MISOMIP/script_Start_From_Restart.sh
 chmod 755 $HOMEDIR_MISOMIP/script_Start_From_Restart.sh
 
@@ -115,6 +138,7 @@ cp $WORKDIR_NEMO/FILES/* $WORKDIR_NEMO/run/$1
 cat Scripts/run_nemo_ISOMIP.sh | sed -e "s#<CASE_NAME>#$1#g"  \
                  -e "s#<DAYS_NEMO>#$NEMO_DAYS_RUN#g" \
                  -e "s#<FORCING_EXP_ID>#$FORCING_EXP_ID#g" \
+                 -e "s#<PREFIX_ELMER>#$PREFIX_ELMER#g" \
                  -e "s#<MISOMIP_WORK_PATH>#$HOMEDIR_MISOMIP#g" \
                 -e "s#<ELMER_WORK_PATH>#$ELMER_WORK_PATH#g"> temp.sh
 mv temp.sh $WORKDIR_NEMO/run/$1/run_nemo_ISOMIP.sh
