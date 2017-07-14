@@ -5,10 +5,12 @@ NRUN_MAX=50
 
 ELMER_MESH_NAME=MISMIP_REGULAR
 
-FREQ_OUTPUT_ELMER=5
-INTERVALS_ELMER=5
-TIME_STEP_ELMER=0.1
-
+TIME_STEP_ELMER=0.1                  # ELMER time step (in yr)
+INTERVALS_ELMER=5                    # duration of ELMER run (in nb time steps)
+FREQ_OUTPUT_ELMER=${INTERVALS_ELMER} # frequency for ELMER outputs
+                                     #   NB1: should be ${INTERVALS_ELMER}
+                                     #        or ${INTERVALS_ELMER} * an integer
+                                     #   NB2: there is also another output at ELMER's initial step
 
 NUM_PARTITIONS_ELMER=24
 NUM_NODES_ELMER=1
@@ -22,7 +24,8 @@ PATH_RESTART=/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP
 CASE_RESTART=IceOcean1r_TEST
 RUN_RESTART=Ice1r200
 
-NEMO_DAYS_RUN=190
+# Number of days in NEMO (will be rounded to an exact number of months later):
+NEMO_DAYS_RUN=`echo "31 * ${TIME_STEP_ELMER} * ${INTERVALS_ELMER} * 12" | bc -l`
 
 FORCING_EXP_ID=EXP4
 #Prefix_Elmer = Ice1r for retreat and warm ocean forcing
