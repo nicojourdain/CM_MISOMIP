@@ -19,7 +19,7 @@ name=Ice1r$number
 
 HomePath=<HOMEDIR_MISOMIP>
 
-WorkPath=/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP
+WorkPath=${SHAREDELMER}/ELMER_MISOMIP  ## TO ADAPT !!
 
 RUN_NEMO=<NEMO_RUN>
 RUN_ELMER=$WorkPath
@@ -50,7 +50,7 @@ C=1.0e-2
 eta=0.2924017738212866
 accum=0.3
 CCou=0.5
-MeltRate=-0.2
+MeltRate=-0.2  # not used for MISOMIP
 
 CALL_NEMO=0
 if [ $1 -lt $NRUN_MAX ]
@@ -81,7 +81,8 @@ mv toto ELMERSOLVER_STARTINFO
 
 nodes=1
 tasks=$numParts
-timeJob=09:50:00
+timeJob=09:50:00  # SBATCH walltime for Elmer/Ice execution
+#timeJob=09:50:00
 jobName=$name
 slurmScketch=$HomePath/../../Templates/Slurm/launchSck.slurm
 slurmFile=launchExec.slurm
