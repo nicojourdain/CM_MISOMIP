@@ -13,9 +13,10 @@ NETCDFHOME="/opt/software/occigen/libraries/netcdf/4.4.0_fortran-4.4.2/hdf5/1.8.
 NETCDFINC="-I$(NETCDFHOME)/include"
 NETCDFLIBS="-L$(NETCDFHOME)/lib -lnetcdff -lnetcdf"
 
-ELMERICE_SRC=/home/njourd/util/ElmerSolver_IGE  # non-comitted elmerice solvers (IGE)
-ELMERICE_USF=/home/njourd/util/ElmerSolver_IGE  # non-comitted elmerice user functions (IGE)
-SOLVERS_SRC=/home/njourd/util/MISOMIP_Melt      # Nacho's solvers and USF
+# non-committed elmerice in ELMERICE_SRC and ELMERICE_USF, and Nacho's in SOLVERS_SRC
+ELMERICE_SRC=/home/njourd/util/ElmerSolver_IGE
+ELMERICE_USF=/home/njourd/util/ElmerSolver_IGE
+SOLVERS_SRC=/home/njourd/util/MISOMIP_Melt
 ExecPath=<ExecutablePath>
 
 SOLVERS_LIST=$(ELMERICE_SRC)/SSAStar.F90 \
