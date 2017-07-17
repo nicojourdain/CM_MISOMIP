@@ -2,22 +2,24 @@ CC=mpicc
 #CCFLAG=-fPIC
 CCFLAG=
 
-NN_HOME=/home/imerino/CODES/nn-c/nn
-CS_HOME=/home/imerino/CODES/csa
+NN_HOME=/util/pygridgen/external/nn
+CS_HOME=/util/pygridgen/external/csa
 NNLIB=$(NN_HOME)/libnn.a
 CSLIB=$(CS_HOME)/libcsa.a
 
 #NETCDF INCLUDE and LIBS Flags
-NETCDFHOME="/opt/software/libraries/netcdf/4.3.3-rc2_fortran-4.4.1/hdf5/1.8.14/intel/16.0.1.150/intelmpi/5.1.2.150"
+#NETCDFHOME="/opt/software/libraries/netcdf/4.3.3-rc2_fortran-4.4.1/hdf5/1.8.14/intel/16.0.1.150/intelmpi/5.1.2.150"
+NETCDFHOME="/opt/software/occigen/libraries/netcdf/4.4.0_fortran-4.4.2/hdf5/1.8.17/intel/17.0/openmpi/intel/2.0.1"
 NETCDFINC="-I$(NETCDFHOME)/include"
 NETCDFLIBS="-L$(NETCDFHOME)/lib -lnetcdff -lnetcdf"
 
-ELMERICE_SRC=/home/imerino/elmerice/Solvers/
-ELMERICE_USF=/home/imerino/elmerice/UserFunctions
-SOLVERS_SRC=/panfs/panasas/cnt0021/gge6066/imerino/MyElmerSolvers/
+ELMERICE_SRC=/home/njourd/models/Elmer/elmerfem/elmerice/Solvers
+ELMERICE_USF=/home/njourd/models/Elmer/elmerfem/elmerice/UserFunctions
+SOLVERS_SRC=/home/njourd/util/MISOMIP_Melt
+OTHER_SRC=/home/njourd/util/ElmerSolver_IGE
 ExecPath=<ExecutablePath>
 
-SOLVERS_LIST=$(SOLVERS_SRC)/SSAStar.F90 \
+SOLVERS_LIST=$(OTHER_SRC)/SSAStar.F90 \
         $(SOLVERS_SRC)/USF_MISMIP_Dom.F90 \
         $(ELMERICE_SRC)/Flotation.F90\
         $(ELMERICE_SRC)/EffectivePressure.F90\

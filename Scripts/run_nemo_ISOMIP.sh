@@ -22,20 +22,20 @@ ulimit -s unlimited
 
 SPINUP=1
 
-CONFIG='ISOMIP'  ## FULL CONFIG NAME (e.g. "trop075" or "trop075_nest025")
-                 ## NB: THIS NAME SHOULD NOT START WITH A NUMBER
+CONFIG='ISOMIP'    #- FULL CONFIG NAME (e.g. "trop075" or "trop075_nest025")
+                   #  NB: THIS NAME SHOULD NOT START WITH A NUMBER
 
-CONFPAR=$CONFIG  #- IF NO NEST SHOULD BE EQUAL TO $CONFIG
-                 #  IF NESTS, SHOULD BE THE ABSOLUTE PARENT CONFIG NAME
-                 #  (e.g. CONFPAR="trop075" when CONFIG="trop075_nest025")
+CONFPAR=$CONFIG    #- IF NO NEST SHOULD BE EQUAL TO $CONFIG
+                   #  IF NESTS, SHOULD BE THE ABSOLUTE PARENT CONFIG NAME
+                   #  (e.g. CONFPAR="trop075" when CONFIG="trop075_nest025")
 
-CASE='<CASE_NAME>' # should not be too long (>15 char.) otherwise, NEMO file names are affected
+CASE='<CASE_NAME>' #- should not be too long (>15 char.) otherwise, NEMO file names are affected
 
-YEAR0=0000       #- initial state of the long experiment (needs four digits)
+YEAR0=0000         #- initial state of the long experiment (needs four digits)
 
-NDAYS=<DAYS_NEMO>      ## NB: the run is adjusted to give a finite number of months
-                ##     => 190 allows  2 x 6-month runs per year
-                ##     => 31  allows 12 x 1-month runs per year
+NDAYS=<DAYS_NEMO>  #- NB: the run is adjusted to give a finite number of months
+                   #      => 190 allows  2 x 6-month runs per year
+                   #      => 31  allows 12 x 1-month runs per year
 
 
 WORKDIR=`pwd`
@@ -51,23 +51,20 @@ PREFIX_ELMER=<PREFIX_ELMER>
 ELMER_WORK_PATH=<ELMER_WORK_PATH>
 MISOMIP_WORK_PATH=<MISOMIP_WORK_PATH>
 
-STOCKDIR="$SCRATCHDIR/NEMO_MISOMIP/"
-#STOCKDIR="$SHAREDELMER"  #- restart, output directory
+STOCKDIR="${SHAREDELMER}/NEMO_MISOMIP"        #- restart, output directory
 
-INPUTDIR="$SCRATCHDIR/NEMO_MISOMIP/input"  #- input directory
+INPUTDIR="${SHAREDELMER}/NEMO_MISOMIP/input"  #- input directory
 
 #- Netcdf library for small fortran scripts (not for NEMO)
 export NC_INC='-I /opt/software/occigen/libraries/netcdf/4.4.0_fortran-4.4.2/hdf5/1.8.17/intel/17.0/openmpi/intel/2.0.1/include'
 export NC_LIB='-L /opt/software/occigen/libraries/netcdf/4.4.0_fortran-4.4.2/hdf5/1.8.17/intel/17.0/openmpi/intel/2.0.1/lib -lnetcdf -lnetcdff'
 
-NEMOdir="/home/`whoami`/NEMO/NEMO3.6_TEST_r6402/" # NEMO model directory
-#XIOSdir="/home/`whoami`/CODES/xios-1.0" # XIOS directory
-XIOSdir="/scratch/cnt0021/gge6066/SHARED/njourdain/xios-1.0"
+NEMOdir="${HOME}/models/nemo_v3_6_STABLE_r6402" #- NEMO model directory
+XIOSdir="${HOME}/models/xios-1.0"               #- XIOS directory
 
+NZOOM=0  #- nb of agrif nests (0 if no agrif nest)
 
-NZOOM=0  # nb of agrif nests (0 if no agrif nest)
-
-NB_NPROC_XIOS_PER_NODE=2 # Number of core used per xios on each node (should typically be in the 1-3 range).
+NB_NPROC_XIOS_PER_NODE=2 #- Number of core used per xios on each node (should typically be in the 1-3 range).
 
 #=================================================================================
 #=================================================================================
