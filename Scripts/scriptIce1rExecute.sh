@@ -19,7 +19,7 @@ name=Ice1r$number
 
 HomePath=<HOMEDIR_MISOMIP>
 
-WorkPath=${SHAREDELMER}/ELMER_MISOMIP  ## TO ADAPT !!
+WorkPath=<WORKDIR_ELMER>
 
 RUN_NEMO=<NEMO_RUN>
 RUN_ELMER=$WorkPath

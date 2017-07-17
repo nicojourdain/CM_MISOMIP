@@ -41,11 +41,10 @@ WORKDIR_NEMO=/scratch/shared/egige60/NEMO_MISOMIP
 WORKDIR_ELMER=/scratch/shared/egige60/ELMER_MISOMIP
 
 #nj CASE_RESTART_PATH=/scratch/cnt0021/gge6066/imerino/MISMIP+/$CASE_RESTART/Results/$RUN_RESTART
-BATHY_FILE=/scratch/cnt0021/gge6066/imerino/NEMO_MISOMIP/input/bathy_meter.nc
+BATHY_FILE=${WORKDIR_NEMO}/input/bathy_meter.nc
+ISF_DRAFT_GENERIC=${WORKDIR_NEMO}/input/isf_draft_meter.nc
 
-ISF_DRAFT_GENERIC=$WORKDIR_NEMO/input/isf_draft_meter.nc
-
-From_VTK_TO_NETCDF_PATH=/home/imerino/From_VTK_TO_NETCDF/build/fromVTKtoElmer
+From_VTK_TO_NETCDF_PATH=${HOME}/util/From_VTK_to_NetCDF/build/fromVTKtoElmer
 
 ###################################################
 ## End of User's choices
@@ -72,6 +71,7 @@ cat Makefile_G | sed -e "s#<ExecutablePath>#$WORKDIR_ELMER/$1/Executables/#g" > 
 
 cat Scripts/scriptWriteISFDraft.sh | sed -e "s#<ISF_DRAFT>#$ISF_DRAFT_GENERIC#g" \
                  -e "s#<BATHY_FILE>#$BATHY_FILE#g" \
+                 -e "s#<VTK_EXE>#${From_VTK_TO_NETCDF_PATH}#g" \
                  -e "s#<NEMO_PATH>#$WORKDIR_NEMO/run/$1#g" > $HOMEDIR_MISOMIP/scriptWriteISFDraft.sh
 chmod a+rx $HOMEDIR_MISOMIP/scriptWriteISFDraft.sh
 
@@ -85,6 +85,7 @@ cat Scripts/scriptIce1rExecute.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<TIME_STEP_ELMER>#$TIME_STEP_ELMER#g" \
                  -e "s#<numParts>#$NUM_PARTITIONS_ELMER#g" \
                  -e "s#<numNodes>#$NUM_NODES_ELMER#g" \
+                 -e "s#<WORKDIR_ELMER>#$WORKDIR_ELMER#g" \
                  -e "s#<Executables>#$WORKDIR_ELMER/$1/Executables/#g" \
                  -e "s#<MeshNamePath>#$WORKDIR_ELMER/$1#g" > $ELMER_WORK_PATH/scriptIce1rExecute.sh
 chmod a+rx $ELMER_WORK_PATH/scriptIce1rExecute.sh
@@ -98,6 +99,7 @@ cat Scripts/scriptIce1aExecute.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<TIME_STEP_ELMER>#$TIME_STEP_ELMER#g" \
                  -e "s#<numParts>#$NUM_PARTITIONS_ELMER#g" \
                  -e "s#<numNodes>#$NUM_NODES_ELMER#g" \
+                 -e "s#<WORKDIR_ELMER>#$WORKDIR_ELMER#g" \
                  -e "s#<Executables>#$WORKDIR_ELMER/$1/Executables/#g" \
                  -e "s#<MeshNamePath>#$WORKDIR_ELMER/$1#g" > $ELMER_WORK_PATH/scriptIce1aExecute.sh
 chmod a+rx $ELMER_WORK_PATH/scriptIce1aExecute.sh
@@ -110,6 +112,7 @@ cat Scripts/scriptInitDomain.sh | sed -e "s#<run>#$1#g" \
                  -e "s#<NEMO_RUN>#$WORKDIR_NEMO/run/$1#g" \
                  -e "s#<numParts>#$NUM_PARTITIONS_ELMER#g" \
                  -e "s#<numNodes>#$NUM_NODES_ELMER#g" \
+                 -e "s#<WORKDIR_ELMER>#$WORKDIR_ELMER#g" \
                  -e "s#<Executables>#$WORKDIR_ELMER/$1/Executables/#g" \
                  -e "s#<MeshNamePath>#$WORKDIR_ELMER/$1#g" > $ELMER_WORK_PATH/scriptInitDomain.sh
 chmod a+rx $ELMER_WORK_PATH/scriptInitDomain.sh

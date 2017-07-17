@@ -14,7 +14,7 @@ numParts=<numParts>
 nodes=<numNodes>
 
 HomePath=<HOMEDIR_MISOMIP>
-WorkPath=/scratch/cnt0021/gge6066/imerino/ELMER_MISOMIP
+WorkPath=<WORKDIR_ELMER>
 RUN_NEMO=<NEMO_RUN>
 RUN_ELMER=$WorkPath
 

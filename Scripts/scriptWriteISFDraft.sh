@@ -6,7 +6,7 @@ ELMER_RUN_PATH=$1
 NEMO_RUN_PATH=<NEMO_PATH>
 RUN_NUM=$2
 
-ln -sf /home/imerino/From_VTK_TO_NETCDF/build/fromVTKtoElmer fromVTKtoElmer
+ln -sf <VTK_EXE> fromVTKtoElmer
 
 ./fromVTKtoElmer $ELMER_RUN_PATH $ISF_GENERIC_FILE $BATHY_FILE temp.nc
 

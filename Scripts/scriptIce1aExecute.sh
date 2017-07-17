@@ -19,7 +19,7 @@ name=Ice1r$number
 
 HomePath=<HOMEDIR_MISOMIP>
 
-WorkPath=${SHAREDELMER}/ELMER_MISOMIP  ## TO ADAPT !!
+WorkPath=<WORKDIR_ELMER>
 
 RUN_NEMO=<NEMO_RUN>
 RUN_ELMER=$WorkPath
@@ -81,7 +81,7 @@ mv toto ELMERSOLVER_STARTINFO
 
 nodes=1
 tasks=$numParts
-timeJob=09:50:00  # SBATCH walltime for Elmer/Ice execution
+timeJob=00:50:00  # SBATCH walltime for Elmer/Ice execution
 #timeJob=09:50:00
 jobName=$name
 slurmScketch=$HomePath/../../Templates/Slurm/launchSck.slurm
