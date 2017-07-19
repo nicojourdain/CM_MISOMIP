@@ -4,7 +4,7 @@
 #SBATCH --ntasks=24
 #SBATCH --ntasks-per-node=24
 #SBATCH --threads-per-core=1
-#SBATCH -J run_ISOMIP_EXP3
+#SBATCH -J nemo_<CASE_NAME>
 #SBATCH -e run_nemo.e%j
 #SBATCH -o run_nemo.o%j
 #SBATCH --time=01:59:00
@@ -59,8 +59,8 @@ INPUTDIR="${SHAREDELMER}/NEMO_MISOMIP/input"  #- input directory
 export NC_INC='-I /opt/software/occigen/libraries/netcdf/4.4.0_fortran-4.4.2/hdf5/1.8.17/intel/17.0/openmpi/intel/2.0.1/include'
 export NC_LIB='-L /opt/software/occigen/libraries/netcdf/4.4.0_fortran-4.4.2/hdf5/1.8.17/intel/17.0/openmpi/intel/2.0.1/lib -lnetcdf -lnetcdff'
 
-NEMOdir="${HOME}/models/nemo_v3_6_STABLE_r6402/NEMOGCM" #- NEMO model directory
-XIOSdir="${HOME}/models/xios-1.0"                       #- XIOS directory
+NEMOdir="/home/njourd/models/nemo_v3_6_STABLE_r6402/NEMOGCM" #- NEMO model directory
+XIOSdir="/home/njourd/models/xios-1.0"                       #- XIOS directory
 
 NZOOM=0  #- nb of agrif nests (0 if no agrif nest)
 
