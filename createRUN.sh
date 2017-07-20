@@ -9,21 +9,22 @@ export LANG=C
 NUM_PARTITIONS_ELMER=24
 NUM_NODES_ELMER=1
 
-NRUN_MAX=50  # maximum number of consecutive Elmer/Ice runs
+NRUN_MAX=400  # maximum number of consecutive Elmer/Ice runs
 
 ELMER_MESH_NAME=MISMIP_REGULAR
 
-TIME_STEP_ELMER=0.1                  # ELMER time step (in yr)
-INTERVALS_ELMER=5                    # duration of ELMER run (in nb time steps)
+TIME_STEP_ELMER=0.0833333333         # ELMER time step (in yr)
+INTERVALS_ELMER=3                    # duration of ELMER run (in nb time steps)
 FREQ_OUTPUT_ELMER=${INTERVALS_ELMER} # frequency for ELMER outputs
                                      #   NB1: should be ${INTERVALS_ELMER}
                                      #        or ${INTERVALS_ELMER} times an integer
                                      #   NB2: there is also another output at ELMER's initial step
 # Number of days in NEMO (will be rounded to an exact number of months later):
-NEMO_DAYS_RUN=`echo "31 * ${TIME_STEP_ELMER} * ${INTERVALS_ELMER} * 12" | bc -l`
+NEMO_DAYS_RUN=`echo "31 * ${TIME_STEP_ELMER} * ${INTERVALS_ELMER} * 12" | bc -l | awk '{print int($1+0.5)}'`
 
 ## Elmer/Ice restart used as initial state for the coupled simultion
 #  NB: restart file is expected to be in ${PATH_RESTART}/${CASE_RESTART}/Results/${RUN_RESTART} 
+#                           with Mesh in ${PATH_RESTART}/${CASE_RESTART}/Mesh/${RUN_RESTART} 
 PATH_RESTART=${STOREDIR}/output_MISMIP+
 CASE_RESTART=Test500m_Schoof_SSAStar
 RUN_RESTART=Run0
