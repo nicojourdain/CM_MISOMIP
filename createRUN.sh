@@ -9,12 +9,12 @@ export LANG=C
 NUM_PARTITIONS_ELMER=24
 NUM_NODES_ELMER=1
 
-NRUN_MAX=400  # maximum number of consecutive Elmer/Ice runs
+NRUN_MAX=1200  # maximum number of consecutive Elmer/Ice runs
 
 ELMER_MESH_NAME=MISMIP_REGULAR
 
 TIME_STEP_ELMER=0.0833333333         # ELMER time step (in yr)
-INTERVALS_ELMER=3                    # duration of ELMER run (in nb time steps)
+INTERVALS_ELMER=1                    # duration of ELMER run (in nb time steps)
 FREQ_OUTPUT_ELMER=${INTERVALS_ELMER} # frequency for ELMER outputs
                                      #   NB1: should be ${INTERVALS_ELMER}
                                      #        or ${INTERVALS_ELMER} times an integer
@@ -52,6 +52,8 @@ From_VTK_TO_NETCDF_PATH=${HOME}/util/From_VTK_to_NetCDF/build/fromVTKtoElmer
 ###################################################
 
 echo "Creating Run $1"
+echo "  > time slots of ${NEMO_DAYS_RUN} days (rounded to full nb of months)"
+echo "  > experiment is ${FORCING_EXP_ID} / ${PREFIX_ELMER}"
 
 #Create folders
 HOMEDIR_MISOMIP=$PWD/RUNS/$1
