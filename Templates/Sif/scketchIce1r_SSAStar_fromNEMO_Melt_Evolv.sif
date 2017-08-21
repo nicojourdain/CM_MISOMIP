@@ -1,34 +1,41 @@
 $name="<name>"
 
-$yearinsec = 31536000.0
-!$rhoi = 900.0/(1.0e6*yearinsec^2)   
-$rhoi=9.218352230172528E-019
-!$rhow = 1000.0/(1.0e6*yearinsec^2)
-$rhow=1.032294781330867E-018
-!$gravity = -9.80*yearinsec^2
-$gravity=-9759227869980866.0
-$n = 3.0
-$m = 0.3333333333
-!$C = 1.0e-2
-$C = <C>
-!$C = 0.03165176
-!$A=3.1536
-!A given in MPa-3/s 2e-17*1e6^(-3)
-$A=20.0
-!$eta = (2.0*A)^(-1.0/n)
-$eta=<eta>
-!$eta=0.2924017738212866
-$zsl=0.0
-$CCou=<CCou>
-$mltrate=<meltRate>
+!- MISMIP+ values :
+$yearinsec = 86400.0 * 365.2422 ! Year length in second 
+$rhoi_SI   =  918.0             ! Ice density (kg/m^3)  
+$rhosw_SI  = 1028.0             ! Sea water density (kg/m^3)
+$rhofw_SI  = 1000.0             ! Fresh water density (kg/m^3)
+$grav_SI   =    9.81            ! Gravity (m/s^2)
+$n    = 3.0                     ! Glen law exponent
+$m    = 0.3333333333            ! Friction law exponent (1/m in MISMIP+ spec.)
+$C    = 1.0e-2                  ! SSA friction parameter (?)
+$A    = 20.0                    ! Glen’s law coefficient (MPa-3/s)
+$eta  = (2.0*$A)^(-1.0/$n)      ! ?
+$zsl  = 0.0                     ! Sea level
+$CCou = 0.5                     ! Coulomb law friction coefficient
+$accu = 0.3                     ! surface mass balance (m/yr)
+$mltrate=-0.2                   ! not used in MISOMIP
+
+!- conversions to Elmer units:
+$rhoi  = $rhoi_SI  / (1.0e6*yearinsec^2)
+$rhosw = $rhosw_SI / (1.0e6*yearinsec^2)
+$rhofw = $rhofw_SI / (1.0e6*yearinsec^2)
+$gravity = - $grav_SI * yearinsec^2
+
+!- to convert kg/m^2/s to m/yr (meters of ice per year) :
+$facmelt = $rhofw_SI / $rhoi_SI * $yearinsec * 1.e-3
+
+!--------------------------------------------------
 
 Header
   Mesh DB "<MeshPath>" "<mesh>"
 End
 
 Constants
-  sea level = Real 0.0
-  water density = Real 1.032294781330867E-018
+  sea level = Real $zsl
+  water density = Real $rhosw
+  Factor melt units = Real $facmelt
+  Ice density = Real $rhoi
 End
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -81,7 +88,7 @@ Body Force 1
   Flow BodyForce 1 = Real 0.0                          
   Flow BodyForce 2 = Real 0.0                          
   Flow BodyForce 3 = Real $gravity
-  Top Surface Accumulation = Real <accum>
+  Top Surface Accumulation = Real $accu
   !Bottom Surface Accumulation = Variable Coordinate 1, Coordinate 2
      !Real procedure "<ExecPath>/USF_MISOMIP_Melt" "MeltRates"
   Bottom Surface Accumulation = equals Melt

@@ -46,11 +46,11 @@ TimeStep=<TIME_STEP_ELMER>
 
 NRUN_MAX=<NRUN_MAX>
 
-C=1.0e-2
-eta=0.2924017738212866
-accum=0.3
-CCou=0.5
-MeltRate=-0.2  # not used for MISOMIP
+#C=1.0e-2
+#eta=0.2924017738212866
+#accum=0.3
+#CCou=0.5
+#MeltRate=-0.2  # not used for MISOMIP
 
 CALL_NEMO=0
 if [ $1 -lt $NRUN_MAX ]
@@ -63,15 +63,15 @@ cat $scketch | sed -e "s#<ResultsPath>#$ResultsPath#g" \
                  -e "s#<Restart>#$Restart#g" \
                  -e "s#<ExecPath>#$ExecPath#g" \
                  -e "s#<RestartPosition>#$RestartPosition#g" \
-                 -e "s#<meltRate>#$MeltRate#g" \
+                 #-e "s#<meltRate>#$MeltRate#g" \
                  -e "s#<MELT_FILE>#$HomePath/melt_rates.nc#g" \
                  -e "s#<outIntervals>#$outIntervals#g" \
                  -e "s#<Intervals>#$Intervals#g" \
-                 -e "s#<CCou>#$CCou#g" \
+                 #-e "s#<CCou>#$CCou#g" \
                  -e "s#<TimeStep>#$TimeStep#g" \
-                 -e "s#<C>#$C#g" \
-                 -e "s#<eta>#$eta#g" \
-                 -e "s#<accum>#$accum#g" \
+                 #-e "s#<C>#$C#g" \
+                 #-e "s#<eta>#$eta#g" \
+                 #-e "s#<accum>#$accum#g" \
                  -e "s#<name>#$name#g" \
 		 -e "s#<mesh>#$mesh#g" > $sifName
 

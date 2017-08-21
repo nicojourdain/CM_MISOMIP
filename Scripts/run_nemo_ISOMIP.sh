@@ -500,7 +500,8 @@ date
 echo " "
 
 #- Check for NaNs :
-ISNAN=`grep "the zonal velocity contains NaNs" ocean.output | wc -l`
+fileSBC=`ls -1 ${CONFIG}-${CASE}_[1-5][d-m]_*_SBC.nc | tail -1`
+ISNAN=`ncdump -v fwfisf ${fileSBC} | grep NaN | wc -l`
 if [ $ISNAN -eq 0 ]; then
   echo "   >> check for NaNs in NEMO's outputs: no NaN found"
 else
