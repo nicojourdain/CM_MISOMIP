@@ -495,12 +495,21 @@ srun --mpi=pmi2  -m cyclic \
     --cpu_bind=map_cpu:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23\
     --multi-prog  ./app.conf
 
-#srun --mpi=pmi2 --multi-prog  ./app.conf
-
-
-
 echo " "
 date
+echo " "
+
+#- Check for NaNs :
+ISNAN=`grep "the zonal velocity contains NaNs" ocean.output | wc -l`
+if [ $ISNAN -eq 0 ]; then
+  echo "   >> check for NaNs in NEMO's outputs: no NaN found"
+else
+  echo "   >> WARNING: NaNs have been found in NEMO's outputs: stopping and restarting the simulation..."
+  rm -f ${CONFIG}-${CASE}_[1-5][d-m]_*nc
+  rm -f mesh_mask_[0-9][0-9][0-9][0-9].nc
+  sbatch ./run_nemo_ISOMIP.sh
+  stop
+fi
 echo " "
 
 ##-- export and compress output files:

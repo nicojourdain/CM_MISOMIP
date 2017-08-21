@@ -15,7 +15,7 @@ else
 	nameRestart=Run0
 fi
 
-name=Ice1r$number
+name=Ice1a$number
 
 HomePath=<HOMEDIR_MISOMIP>
 

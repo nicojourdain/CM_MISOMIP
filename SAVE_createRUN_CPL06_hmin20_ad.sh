@@ -25,18 +25,18 @@ NEMO_DAYS_RUN=`echo "31 * ${TIME_STEP_ELMER} * ${INTERVALS_ELMER} * 12" | bc -l 
 ## Elmer/Ice restart used as initial state for the coupled simultion
 #  NB: restart file is expected to be in ${PATH_RESTART}/${CASE_RESTART}/Results/${RUN_RESTART} 
 #                           with Mesh in ${PATH_RESTART}/${CASE_RESTART}/Mesh/${RUN_RESTART} 
-PATH_RESTART=${STOREDIR}/output_MISMIP+
-CASE_RESTART=Test500m_Schoof_SSAStar
-RUN_RESTART=Run0
+PATH_RESTART=${SHAREDELMER}/ELMER_MISOMIP
+CASE_RESTART=CPL06_hmin20
+RUN_RESTART=Ice1r200
 
-FORCING_EXP_ID='EXP13'  ## ='EXP3' for ocean relaxation towards warm conditions 
-                        ## ='EXP4' for ocean relaxation towards cold conditions
+FORCING_EXP_ID='EXP4'  ## ='EXP3' for ocean relaxation towards warm conditions 
+                       ## ='EXP4' for ocean relaxation towards cold conditions
 
-PREFIX_ELMER='Ice1r'   ## ='Ice1r' for retreat and warm ocean forcing (FORCING_EXP_ID=EXP3)
+PREFIX_ELMER='Ice1a'   ## ='Ice1r' for retreat and warm ocean forcing (FORCING_EXP_ID=EXP3)
                        ## ='Ice1a' for readvance and cold ocean forcing (FORCING_EXP_ID=EXP4)
 
 # NEMO restart file (only used if you do not start with the ocean at rest, e.g. to restart MISOMIP)
-RST_FILE='/store/njourd/restart_MISOMIP_not_from_rest/restart_from_EXP5.nc'
+RST_FILE="${SHAREDELMER}/NEMO_MISOMIP/restart/nemo_ISOMIP_CPL06_hmin20/restart_15688512.nc"
 
 WORKDIR_NEMO=/scratch/shared/egige60/NEMO_MISOMIP
 WORKDIR_ELMER=/scratch/shared/egige60/ELMER_MISOMIP

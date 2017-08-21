@@ -14,7 +14,7 @@ NRUN_MAX=100  # maximum number of consecutive Elmer/Ice runs
 ELMER_MESH_NAME=MISMIP_REGULAR
 
 TIME_STEP_ELMER=0.0833333333         # ELMER time step (in yr)
-INTERVALS_ELMER=6                    # duration of ELMER run (in nb time steps)
+INTERVALS_ELMER=12                   # duration of ELMER run (in nb time steps)
 FREQ_OUTPUT_ELMER=${INTERVALS_ELMER} # frequency for ELMER outputs
                                      #   NB1: should be ${INTERVALS_ELMER}
                                      #        or ${INTERVALS_ELMER} times an integer
@@ -29,14 +29,14 @@ PATH_RESTART=${STOREDIR}/output_MISMIP+
 CASE_RESTART=Test500m_Schoof_SSAStar
 RUN_RESTART=Run0
 
-FORCING_EXP_ID='EXP13'  ## ='EXP3' for ocean relaxation towards warm conditions 
-                        ## ='EXP4' for ocean relaxation towards cold conditions
+FORCING_EXP_ID='EXP3'  ## ='EXP3' for ocean relaxation towards warm conditions 
+                       ## ='EXP4' for ocean relaxation towards cold conditions
 
 PREFIX_ELMER='Ice1r'   ## ='Ice1r' for retreat and warm ocean forcing (FORCING_EXP_ID=EXP3)
                        ## ='Ice1a' for readvance and cold ocean forcing (FORCING_EXP_ID=EXP4)
 
 # NEMO restart file (only used if you do not start with the ocean at rest, e.g. to restart MISOMIP)
-RST_FILE='/store/njourd/restart_MISOMIP_not_from_rest/restart_from_EXP5.nc'
+RST_FILE='/scratch/cnt0021/gge6066/imerino/NEMO_MISOMIP/run/IceOcean1r_TEST/restart_15846192.nc'
 
 WORKDIR_NEMO=/scratch/shared/egige60/NEMO_MISOMIP
 WORKDIR_ELMER=/scratch/shared/egige60/ELMER_MISOMIP

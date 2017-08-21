@@ -229,8 +229,8 @@ Solver 7
    Exec Solver = Before Simulation
    Equation = "MISOMIP_MELT"
    Variable = Melt
-   !Procedure = "<ExecPath>/MISOMIP_Melt_Consv_Evolv" "MISOMIP_Melt_Consv_Evolv"
-   Procedure = "<ExecPath>/MISOMIP_Melt_Consv" "MISOMIP_Melt_Consv"
+   Procedure = "<ExecPath>/MISOMIP_Melt_Consv_Evolv" "MISOMIP_Melt_Consv"
+   !Procedure = "<ExecPath>/MISOMIP_Melt_Consv" "MISOMIP_Melt_Consv"
    !Procedure = "<ExecPath>/MISOMIP_Melt" "MISOMIP_Melt"
 
    Draft file = File "isf_draft_meter.nc"
